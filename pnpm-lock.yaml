@@ -5306,6 +5306,8 @@ packages:
   /@aws-cdk/cdk-assets-schema/1.44.0:
     resolution: {integrity: sha512-FeII0+Avnin3xemZR56gcsqbOosWdQ7i3L8C+JuZRPgCNMc8uvsH7rB6QditTbw6l43rGMLnlEbtHVobPVRnKg==}
     engines: {node: '>= 10.13.0 <13 || >=13.7.0'}
+    dependencies:
+      semver: 7.3.5
     dev: false
     bundledDependencies:
       - semver
@@ -5329,6 +5331,9 @@ packages:
   /@aws-cdk/cloud-assembly-schema/1.44.0:
     resolution: {integrity: sha512-n/jln7teKE7o5ZYJ6o6+Jix4nRluC3hNFt+KYzEuVYOAkL0Mwoj92FpJnHkqU5jh0vw6K3OAd5Bq8+fICzEgaQ==}
     engines: {node: '>= 10.13.0 <13 || >=13.7.0'}
+    dependencies:
+      jsonschema: 1.4.0
+      semver: 7.3.5
     dev: false
     bundledDependencies:
       - jsonschema
@@ -5567,6 +5572,7 @@ packages:
       '@aws-cdk/cloud-assembly-schema': 1.44.0
       '@aws-cdk/cx-api': 1.44.0
       constructs: 3.3.71
+      minimatch: 3.0.5
     dev: false
     bundledDependencies:
       - minimatch
@@ -5598,6 +5604,7 @@ packages:
     engines: {node: '>= 10.13.0 <13 || >=13.7.0'}
     dependencies:
       '@aws-cdk/cloud-assembly-schema': 1.44.0
+      semver: 7.3.5
     dev: false
     bundledDependencies:
       - semver
@@ -13720,6 +13727,7 @@ packages:
   /constructs/3.3.71:
     resolution: {integrity: sha512-3KFtTsA7OV27m/+pJhN4iJkKzHbPIPvyvEX5BQ/JCAWjfCHOQEVpIgxHLpT4i8L1OFta+pJrzcEVAHo6UitwqA==}
     engines: {node: '>= 10.17.0'}
+    bundledDependencies: []
 
   /contains-path/0.1.0:
     resolution: {integrity: sha1-/ozxhP9mcLa67wGp1IYaXL7EEgo=}
