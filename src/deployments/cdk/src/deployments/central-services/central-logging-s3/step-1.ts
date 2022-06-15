@@ -155,6 +155,7 @@ async function cwlSettingsInLogArchive(props: {
   } = props;
 
   // Create Kinesis Stream for Logs streaming
+
   const logsStream = new kinesis.Stream(scope, 'Logs-Stream', {
     streamName: createName({
       name: 'Kinesis-Logs-Stream',
@@ -166,11 +167,11 @@ async function cwlSettingsInLogArchive(props: {
   });
 
   const destinationName = createName({
-    name: 'LogDestination',
+    name: 'LogDestinationOrg',
     suffixLength: 0,
   });
 
-  const destinatinPolicy = {
+  const destinationPolicy = {
     Version: '2012-10-17',
     Statement: [
       {
@@ -187,9 +188,9 @@ async function cwlSettingsInLogArchive(props: {
       },
     ],
   };
-  const destinationPolicyStr = JSON.stringify(destinatinPolicy);
+  const destinationPolicyStr = JSON.stringify(destinationPolicy);
   // Create AWS Logs Destination
-  const logDestination = new logs.CfnDestination(scope, 'Log-Destination1', {
+  const logDestination = new logs.CfnDestination(scope, 'LogDestinationOrg', {
     destinationName,
     targetArn: logsStream.streamArn,
     roleArn: logStreamRoleArn,
@@ -273,7 +274,7 @@ async function cwlSettingsInLogArchive(props: {
   });
 
   // Store LogDestination ARN in output so that subsequent phases can access the output
-  new CfnLogDestinationOutput(scope, `CloudWatchCentralLoggingOutput`, {
+  new CfnLogDestinationOutput(scope, `CloudWatchCentralLoggingOrgOutput`, {
     destinationArn: logDestination.attrArn,
     destinationName: logDestination.destinationName,
     destinationKey: 'CwlCentralLogDestination',
