@@ -475,6 +475,10 @@ translate(c.SubnetDefinitionConfig, {
       description:
         'Define the subnet in the Accelerator to reserve the address space, but do not create it at this time.  Used to define a 3 AZ config, but deploy a 2 AZ config.',
     },
+    'outpost-arn': {
+      title: 'Outpost ARN',
+      description: 'The Outpost ARN needed to associate the subnet with an AWS Outpost implementation',
+    },
   },
 });
 
@@ -596,7 +600,7 @@ translate(c.RouteConfig, {
     },
     target: {
       title: '',
-      description: 'Next-hop address for the route',
+      description: 'Next-hop address for the route. If target is set to customer, the target-id and type are required.',
     },
     name: {
       title: '',
@@ -609,6 +613,14 @@ translate(c.RouteConfig, {
     port: {
       title: '',
       description: 'When routing traffic to ports of 3rd party virtual appliances',
+    },
+    'target-id': {
+      title: 'Target ID',
+      description: 'The ID of the specified target',
+    },
+    type: {
+      title: 'Target Type',
+      description: 'The type of target for the next hop.',
     },
   },
 });
@@ -1031,6 +1043,10 @@ translate(c.VpcConfigType, {
     'central-endpoint': {
       title: '',
       description: 'Use central endpoints for this VPC',
+    },
+    'lgw-route-table-id': {
+      title: 'Local Gateway Route Table ID',
+      description: 'The route table ID to associate a VPC to a local zone.',
     },
   },
 });
