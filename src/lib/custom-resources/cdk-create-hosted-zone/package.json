@@ -8,17 +8,16 @@
     "lint:eslint": "pnpx eslint '{cdk,lib,src}/**/*.{js,ts}'"
   },
   "dependencies": {
+    "@aws-accelerator/custom-resource-create-hosted-zone": "link:",
     "@aws-accelerator/custom-resource-create-hosted-zone-runtime": "workspace:*",
-    "aws-cdk-lib/aws-iam": "1.144.0",
-    "aws-cdk-lib/aws-lambda": "1.144.0",
-    "aws-cdk-lib/core": "1.144.0"
+    "aws-cdk-lib": "2.28.0",
+    "constructs": "10.0.12"
   },
   "devDependencies": {
     "@types/node": "14.14.31"
   },
   "peerDependencies": {
     "@aws-accelerator/custom-resource-create-hosted-zone-runtime": "workspace:*",
-    "aws-cdk-lib/aws-iam": "1.144.0",
-    "aws-cdk-lib/core": "1.144.0"
+    "aws-cdk-lib": "2.28.0"
   }
 }
