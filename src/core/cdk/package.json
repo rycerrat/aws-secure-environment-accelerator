@@ -20,19 +20,9 @@
   "dependencies": {
     "@aws-accelerator/accelerator-runtime": "workspace:*",
     "@aws-accelerator/cdk-accelerator": "workspace:*",
-    "@aws-cdk/aws-codebuild": "1.171.0",
-    "@aws-cdk/aws-dynamodb": "1.171.0",
-    "@aws-cdk/aws-events": "1.171.0",
-    "@aws-cdk/aws-iam": "1.171.0",
-    "@aws-cdk/aws-kms": "1.171.0",
-    "@aws-cdk/aws-lambda": "1.171.0",
-    "@aws-cdk/aws-s3": "1.171.0",
-    "@aws-cdk/aws-s3-assets": "1.171.0",
-    "@aws-cdk/aws-secretsmanager": "1.171.0",
-    "@aws-cdk/aws-sns": "1.171.0",
-    "@aws-cdk/aws-stepfunctions": "1.171.0",
-    "@aws-cdk/aws-stepfunctions-tasks": "1.171.0",
-    "@aws-cdk/core": "1.171.0"
+    "aws-cdk-lib": "2.28.0",
+    "constructs": "10.0.0"
+
   },
   "devDependencies": {
     "@types/node": "14.14.31",
