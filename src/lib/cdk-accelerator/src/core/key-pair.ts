@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import { Keypair } from '@aws-accelerator/custom-resource-ec2-keypair';
 import { createName, createSecretPrefix } from './accelerator-name-generator';
 

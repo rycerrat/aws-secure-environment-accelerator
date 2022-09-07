@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as elb from 'aws-cdk-lib/aws-elasticloadbalancingv2';
 import { ElbDeletionProtection } from '@aws-accelerator/custom-resource-elb-deletion-protection';
 import * as s3 from 'aws-cdk-lib/aws-s3';

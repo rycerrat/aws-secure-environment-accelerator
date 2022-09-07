@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import { PcxRouteConfig, PcxRouteConfigType, ResolvedVpcConfig } from '@aws-accelerator/common-config/src';
 import { StackOutput } from '@aws-accelerator/common-outputs/src/stack-output';

@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import { AcceleratorConfig } from '@aws-accelerator/common-config/src';

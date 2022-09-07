@@ -9,7 +9,7 @@ import * as kms from 'aws-cdk-lib/aws-kms';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as s3 from 'aws-cdk-lib/aws-s3';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import path from 'path';
 import { getAccountId } from '@aws-accelerator/common-outputs/src/accounts';
 import { IamRoleNameOutputFinder } from '@aws-accelerator/common-outputs/src/iam-role';

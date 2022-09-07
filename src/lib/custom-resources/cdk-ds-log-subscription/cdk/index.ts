@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as custom from 'aws-cdk-lib/custom-resources';
 import * as ds from 'aws-cdk-lib/aws-directoryservice';
 import * as iam from 'aws-cdk-lib/aws-iam';

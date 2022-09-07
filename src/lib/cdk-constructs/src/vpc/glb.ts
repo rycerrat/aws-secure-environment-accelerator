@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as elb from 'aws-cdk-lib/aws-elasticloadbalancingv2';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import { RegionInfo, Default } from 'aws-cdk-lib/region-info';

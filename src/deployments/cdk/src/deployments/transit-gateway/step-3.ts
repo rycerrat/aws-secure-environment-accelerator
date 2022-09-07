@@ -22,7 +22,7 @@ import { AccountStacks } from '../../common/account-stacks';
 import { Account } from '../../utils/accounts';
 import { StackOutput } from '@aws-accelerator/common-outputs/src/stack-output';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import { VpcOutputFinder } from '@aws-accelerator/common-outputs/src/vpc';
 import { TgwVpnAttachmentsOutputFinder } from '../firewall/cluster/outputs';
 

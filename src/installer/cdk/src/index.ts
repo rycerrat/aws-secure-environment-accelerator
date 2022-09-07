@@ -13,7 +13,7 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as codebuild from 'aws-cdk-lib/aws-codebuild';
 import * as codecommit from 'aws-cdk-lib/aws-codecommit';
 import * as codepipeline from 'aws-cdk-lib/aws-codepipeline';

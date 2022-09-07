@@ -17,7 +17,7 @@ import { AccountStacks } from '../../../common/account-stacks';
 import { Ec2MarketPlaceSubscriptionCheck } from '@aws-accelerator/custom-resource-ec2-marketplace-subscription-validation';
 import { JsonOutputValue } from '../../../common/json-output';
 import { AmiSubscriptionOutput } from '@aws-accelerator/common-outputs/src/stack-output';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 
 export interface FirewallSubscriptionStep1Props {
   accountKey: string;

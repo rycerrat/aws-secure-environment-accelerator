@@ -18,7 +18,7 @@ import { SecurityHub } from '@aws-accelerator/cdk-constructs/src/security-hub';
 import { StackOutput } from '@aws-accelerator/common-outputs/src/stack-output';
 import { IamRoleOutputFinder } from '@aws-accelerator/common-outputs/src/iam-role';
 import { LogGroup } from '@aws-accelerator/custom-resource-logs-log-group';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as eventBridge from 'aws-cdk-lib/aws-events';
 import * as targets from 'aws-cdk-lib/aws-events-targets';
 import * as lambda from 'aws-cdk-lib/aws-lambda';

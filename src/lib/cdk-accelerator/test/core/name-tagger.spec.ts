@@ -12,7 +12,7 @@
  */
 
 import 'jest';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import { expect, haveResource, haveResourceLike } from 'aws-cdk-lib/assert';
 import { AcceleratorNameTagger } from '../../src/core';

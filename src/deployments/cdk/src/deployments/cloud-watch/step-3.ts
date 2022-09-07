@@ -13,7 +13,7 @@
 
 import * as c from '@aws-accelerator/common-config';
 import { AccountStacks } from '../../common/account-stacks';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import { createName, createSnsTopicName } from '@aws-accelerator/cdk-accelerator/src/core/accelerator-name-generator';
 import * as events from 'aws-cdk-lib/aws-events';
 

@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as r53Resolver from 'aws-cdk-lib/aws-route53resolver';
 
 export interface ResolverRuleProps {

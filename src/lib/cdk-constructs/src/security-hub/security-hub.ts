@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import { SecurityHubEnable } from '@aws-accelerator/custom-resource-security-hub-enable';
 import { SecurityHubSendInvites } from '@aws-accelerator/custom-resource-security-hub-send-invites';
 import { SecurityHubAcceptInvites } from '@aws-accelerator/custom-resource-security-hub-accept-invites';

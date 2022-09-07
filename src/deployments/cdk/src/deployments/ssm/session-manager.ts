@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import { StackOutput } from '@aws-accelerator/common-outputs/src/stack-output';
 import { AcceleratorConfig } from '@aws-accelerator/common-config/src';
 import { AccountStacks } from '../../common/account-stacks';

@@ -12,7 +12,7 @@
  */
 
 import { IPv4CidrRange } from 'ip-num';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import { S3Template } from '@aws-accelerator/custom-resource-s3-template';

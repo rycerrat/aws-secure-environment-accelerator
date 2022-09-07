@@ -14,7 +14,7 @@
 import 'jest';
 import * as fs from 'fs';
 import * as path from 'path';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as cfnspec from 'aws-cdk-lib/cfnspec';
 import { S3 } from '@aws-accelerator/common/src/aws/s3';
 import { DynamoDB } from '@aws-accelerator/common/src/aws/dynamodb';

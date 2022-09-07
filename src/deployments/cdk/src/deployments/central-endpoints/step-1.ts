@@ -13,7 +13,7 @@
 
 import * as c from '@aws-accelerator/common-config';
 import { AccountStacks } from '../../common/account-stacks';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import { StackOutput } from '@aws-accelerator/common-outputs/src/stack-output';
 import { trimSpecialCharacters } from '@aws-accelerator/common-outputs/src/secrets';
 import { VpcOutputFinder } from '@aws-accelerator/common-outputs/src/vpc';

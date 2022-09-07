@@ -17,7 +17,7 @@ import { StackOutput } from '@aws-accelerator/common-outputs/src/stack-output';
 import { AcceleratorConfig } from '@aws-accelerator/common-config/src';
 import { AccountStacks } from '../../common/account-stacks';
 import { AccountBuckets } from '../defaults';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import { createLogGroupName } from '@aws-accelerator/cdk-accelerator/src/core/accelerator-name-generator';
 import { LogGroup } from '@aws-accelerator/custom-resource-logs-log-group';
 import { IamRoleOutputFinder } from '@aws-accelerator/common-outputs/src/iam-role';

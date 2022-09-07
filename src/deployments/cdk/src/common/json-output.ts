@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type Producer = () => any;

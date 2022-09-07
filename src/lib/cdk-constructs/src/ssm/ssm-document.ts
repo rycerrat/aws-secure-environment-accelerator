@@ -12,7 +12,7 @@
  */
 
 import hashSum from 'hash-sum';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as ssm from 'aws-cdk-lib/aws-ssm';
 
 export class Document extends ssm.CfnDocument {

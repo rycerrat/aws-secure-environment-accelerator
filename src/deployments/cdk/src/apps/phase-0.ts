@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as accessanalyzer from 'aws-cdk-lib/aws-accessanalyzer';
 import { createName } from '@aws-accelerator/cdk-accelerator/src/core/accelerator-name-generator';
 import * as outputKeys from '@aws-accelerator/common-outputs/src/stack-output';

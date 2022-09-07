@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import { LaunchConfiguration } from '../../src/autoscaling';
 import { CfnAutoScalingGroup } from 'aws-cdk-lib/aws-autoscaling';
 

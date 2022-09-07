@@ -12,7 +12,7 @@
  */
 
 import hashSum from 'hash-sum';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as budgets from 'aws-cdk-lib/aws-budgets';
 
 export interface BudgetProps {

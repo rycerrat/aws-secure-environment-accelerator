@@ -13,7 +13,7 @@
 
 import { Vpc } from '@aws-accelerator/cdk-constructs/src/vpc';
 import * as c from '@aws-accelerator/common-config/src';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import {
   getStackJsonOutput,
   OUTPUT_SUBSCRIPTION_REQUIRED,

@@ -12,7 +12,7 @@
  */
 
 import * as t from 'io-ts';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import { StackOutput } from '@aws-accelerator/common-outputs/src/stack-output';
 import { StructuredValue, findValuesFromOutputs } from '@aws-accelerator/common-outputs/src/structured-output';
 

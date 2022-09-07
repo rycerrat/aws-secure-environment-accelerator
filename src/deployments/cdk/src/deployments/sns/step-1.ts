@@ -19,7 +19,7 @@ import { createSnsTopicName } from '@aws-accelerator/cdk-accelerator/src/core/ac
 import { SNS_NOTIFICATION_TYPES } from '@aws-accelerator/common/src/util/constants';
 import * as path from 'path';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import { IamRoleOutputFinder } from '@aws-accelerator/common-outputs/src/iam-role';
 import { StackOutput } from '@aws-accelerator/common-outputs/src/stack-output';
 import * as iam from 'aws-cdk-lib/aws-iam';

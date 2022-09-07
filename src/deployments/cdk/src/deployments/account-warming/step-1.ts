@@ -14,7 +14,7 @@
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as c from '@aws-accelerator/common-config/src';
 import { AccountStacks } from '../../common/account-stacks';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import { StackOutput } from '@aws-accelerator/common-outputs/src/stack-output';
 import { StructuredOutput } from '../../common/structured-output';
 import { InstanceTimeOutputType, InstanceStatusOutput, getTimeDiffInMinutes } from './outputs';

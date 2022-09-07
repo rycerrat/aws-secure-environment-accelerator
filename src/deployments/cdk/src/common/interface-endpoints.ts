@@ -13,7 +13,7 @@
 
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as route53 from 'aws-cdk-lib/aws-route53';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 
 export interface InterfaceEndpointProps {
   serviceName: string;

@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as r53resolver from 'aws-cdk-lib/aws-route53resolver';
 import { R53DnsEndpointIps } from '@aws-accelerator/custom-resource-r53-dns-endpoint-ips';

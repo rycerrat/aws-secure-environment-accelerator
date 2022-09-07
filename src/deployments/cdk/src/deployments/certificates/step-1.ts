@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as certificatemanager from 'aws-cdk-lib/aws-certificatemanager';
 import * as secrets from 'aws-cdk-lib/aws-secretsmanager';
 import * as s3 from 'aws-cdk-lib/aws-s3';

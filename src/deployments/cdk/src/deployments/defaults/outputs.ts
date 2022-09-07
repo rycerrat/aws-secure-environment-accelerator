@@ -12,7 +12,7 @@
  */
 
 import * as t from 'io-ts';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as kms from 'aws-cdk-lib/aws-kms';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import { AccountStacks } from '../../common/account-stacks';

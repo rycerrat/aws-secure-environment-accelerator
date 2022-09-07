@@ -12,7 +12,7 @@
  */
 
 import path from 'path';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as cxschema from 'aws-cdk-lib/cloud-assembly-schema';
 import { CloudAssembly, CloudFormationStackArtifact, Environment } from 'aws-cdk-lib/cx-api';
 import { Mode, ToolkitInfo } from 'aws-cdk';

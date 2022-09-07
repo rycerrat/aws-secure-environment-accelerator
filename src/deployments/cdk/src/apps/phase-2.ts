@@ -12,7 +12,7 @@
  */
 
 import { pascalCase } from 'pascal-case';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import { getAccountId } from '../utils/accounts';
 import { JsonOutputValue } from '../common/json-output';
 import { getVpcConfig } from '../common/get-all-vpcs';

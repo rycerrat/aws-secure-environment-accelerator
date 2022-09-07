@@ -12,7 +12,7 @@
  */
 
 import hashSum from 'hash-sum';
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as autoscaling from 'aws-cdk-lib/aws-autoscaling';
 
 export type LaunchConfigurationProps = autoscaling.CfnLaunchConfigurationProps;
