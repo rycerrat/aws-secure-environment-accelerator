@@ -12,12 +12,12 @@
  */
 
 import 'jest';
-import * as cdk from '@aws-cdk/core';
-import * as ec2 from '@aws-cdk/aws-ec2';
-import { expect, haveResource, haveResourceLike } from '@aws-cdk/assert';
+import * as cdk from 'aws-cdk-lib/core';
+import * as ec2 from 'aws-cdk-lib/aws-ec2';
+import { expect, haveResource, haveResourceLike } from 'aws-cdk-lib/assert';
 import { AcceleratorNameTagger } from '../../src/core';
 // eslint-disable-next-line
-import { Aspects } from '@aws-cdk/core';
+import { Aspects } from 'aws-cdk-lib/core';
 
 test('should add the Name tag with the correct suffix to ec2.Vpc', () => {
   const stack = new cdk.Stack();

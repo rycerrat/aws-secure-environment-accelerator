@@ -12,8 +12,8 @@
  */
 
 import { pascalCase } from 'pascal-case';
-import * as cdk from '@aws-cdk/core';
-import * as ec2 from '@aws-cdk/aws-ec2';
+import * as cdk from 'aws-cdk-lib/core';
+import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as c from '@aws-accelerator/common-config/src';
 import { AccountStacks } from '../../../common/account-stacks';
 import { FirewallPort, CfnFirewallPortOutput } from './outputs';

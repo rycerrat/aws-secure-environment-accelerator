@@ -11,10 +11,10 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
-import * as iam from '@aws-cdk/aws-iam';
-import * as kms from '@aws-cdk/aws-kms';
-import * as secrets from '@aws-cdk/aws-secretsmanager';
+import * as cdk from 'aws-cdk-lib/core';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as kms from 'aws-cdk-lib/aws-kms';
+import * as secrets from 'aws-cdk-lib/aws-secretsmanager';
 import { createEncryptionKeyName } from './accelerator-name-generator';
 
 export interface SecretsContainerProps extends Omit<secrets.SecretProps, 'encryptionKey'> {

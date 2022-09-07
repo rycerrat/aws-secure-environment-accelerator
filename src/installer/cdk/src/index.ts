@@ -13,15 +13,15 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import * as cdk from '@aws-cdk/core';
-import * as codebuild from '@aws-cdk/aws-codebuild';
-import * as codecommit from '@aws-cdk/aws-codecommit';
-import * as codepipeline from '@aws-cdk/aws-codepipeline';
-import * as actions from '@aws-cdk/aws-codepipeline-actions';
-import * as iam from '@aws-cdk/aws-iam';
-import * as kms from '@aws-cdk/aws-kms';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as s3 from '@aws-cdk/aws-s3';
+import * as cdk from 'aws-cdk-lib/core';
+import * as codebuild from 'aws-cdk-lib/aws-codebuild';
+import * as codecommit from 'aws-cdk-lib/aws-codecommit';
+import * as codepipeline from 'aws-cdk-lib/aws-codepipeline';
+import * as actions from 'aws-cdk-lib/aws-codepipeline-actions';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as kms from 'aws-cdk-lib/aws-kms';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as s3 from 'aws-cdk-lib/aws-s3';
 import { publicDecrypt } from 'crypto';
 
 process.on('unhandledRejection', (reason, _) => {
@@ -189,7 +189,7 @@ class Installer extends cdk.Stack {
       }),
     );
 
-    const cfnInstallerProjectRole = installerProjectRole.node.defaultChild as iam.CfnRole;
+    const cfnInstallerProjectRole = installerProjectRole.node.defaultChild ;
     cfnInstallerProjectRole.cfnOptions.metadata = {
       cfn_nag: {
         rules_to_suppress: [
@@ -202,7 +202,7 @@ class Installer extends cdk.Stack {
     };
 
     const cfnInstallerProjectRoleDefaultPolicy = installerProjectRole.node.findChild('DefaultPolicy').node
-      .defaultChild as iam.CfnPolicy;
+      .defaultChild ;
     cfnInstallerProjectRoleDefaultPolicy.cfnOptions.metadata = {
       cfn_nag: {
         rules_to_suppress: [
@@ -422,7 +422,7 @@ class Installer extends cdk.Stack {
       }),
     );
 
-    const cfnStateMachineExecutionRole = stateMachineExecutionRole.node.defaultChild as iam.CfnRole;
+    const cfnStateMachineExecutionRole = stateMachineExecutionRole.node.defaultChild ;
     cfnStateMachineExecutionRole.cfnOptions.metadata = {
       cfn_nag: {
         rules_to_suppress: [
@@ -435,7 +435,7 @@ class Installer extends cdk.Stack {
     };
 
     const cfnStateMachineExecutionRoleDefaultPolicy = stateMachineExecutionRole.node.findChild('DefaultPolicy').node
-      .defaultChild as iam.CfnPolicy;
+      .defaultChild ;
     cfnStateMachineExecutionRoleDefaultPolicy.cfnOptions.metadata = {
       cfn_nag: {
         rules_to_suppress: [
@@ -462,7 +462,7 @@ class Installer extends cdk.Stack {
     });
 
     const cfnStateMachineStartExecutionLambda = stateMachineStartExecutionLambda.node
-      .defaultChild as lambda.CfnFunction;
+      .defaultChild ;
     cfnStateMachineStartExecutionLambda.cfnOptions.metadata = {
       cfn_nag: {
         rules_to_suppress: [
@@ -492,7 +492,7 @@ class Installer extends cdk.Stack {
       handler: 'index.handler',
     });
 
-    const cfnSaveApplicationVersionLambda = saveApplicationVersionLambda.node.defaultChild as lambda.CfnFunction;
+    const cfnSaveApplicationVersionLambda = saveApplicationVersionLambda.node.defaultChild ;
     cfnSaveApplicationVersionLambda.cfnOptions.metadata = {
       cfn_nag: {
         rules_to_suppress: [
@@ -522,7 +522,7 @@ class Installer extends cdk.Stack {
       handler: 'index.handler',
     });
 
-    const cfnValidateParametersLambda = validateParametersLambda.node.defaultChild as lambda.CfnFunction;
+    const cfnValidateParametersLambda = validateParametersLambda.node.defaultChild ;
     cfnValidateParametersLambda.cfnOptions.metadata = {
       cfn_nag: {
         rules_to_suppress: [
@@ -564,7 +564,7 @@ class Installer extends cdk.Stack {
       objectOwnership: s3.ObjectOwnership.BUCKET_OWNER_PREFERRED,
     });
 
-    const cfnInstallerArtifactsBucket = installerArtifactsBucket.node.defaultChild as s3.CfnBucket;
+    const cfnInstallerArtifactsBucket = installerArtifactsBucket.node.defaultChild ;
     cfnInstallerArtifactsBucket.cfnOptions.metadata = {
       cfn_nag: {
         rules_to_suppress: [
@@ -662,7 +662,7 @@ class Installer extends cdk.Stack {
 
     cdk.Aspects.of(this).add(new cdk.Tag('Accelerator', `${acceleratorName}1`));
 
-    const cfnInstallerPipelineRole = installerPipelineRole.node.defaultChild as iam.CfnRole;
+    const cfnInstallerPipelineRole = installerPipelineRole.node.defaultChild ;
     cfnInstallerPipelineRole.cfnOptions.metadata = {
       cfn_nag: {
         rules_to_suppress: [
@@ -675,7 +675,7 @@ class Installer extends cdk.Stack {
     };
 
     const cfnInstallerPipelineRoleDefaultPolicy = installerPipeline.role.node.findChild('DefaultPolicy').node
-      .defaultChild as iam.CfnPolicy;
+      .defaultChild ;
     cfnInstallerPipelineRoleDefaultPolicy.cfnOptions.metadata = {
       cfn_nag: {
         rules_to_suppress: [

@@ -12,8 +12,8 @@
  */
 
 import * as path from 'path';
-import * as cdk from '@aws-cdk/core';
-import * as iam from '@aws-cdk/aws-iam';
+import * as cdk from 'aws-cdk-lib/core';
+import * as iam from 'aws-cdk-lib/aws-iam';
 
 const resourceType = 'Custom::EC2ImageFinder';
 

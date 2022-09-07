@@ -13,11 +13,11 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import * as cdk from '@aws-cdk/core';
-import * as alb from '@aws-cdk/aws-elasticloadbalancingv2';
-import * as iam from '@aws-cdk/aws-iam';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as s3 from '@aws-cdk/aws-s3';
+import * as cdk from 'aws-cdk-lib/core';
+import * as alb from 'aws-cdk-lib/aws-elasticloadbalancingv2';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as s3 from 'aws-cdk-lib/aws-s3';
 import { ApplicationLoadBalancer, GatewayLoadBalancer } from '@aws-accelerator/cdk-constructs/src/vpc';
 import { CfnLoadBalancerOutput } from './outputs';
 import {

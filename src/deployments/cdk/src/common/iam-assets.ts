@@ -11,8 +11,8 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
-import * as iam from '@aws-cdk/aws-iam';
+import * as cdk from 'aws-cdk-lib/core';
+import * as iam from 'aws-cdk-lib/aws-iam';
 import {
   IamConfig,
   IamConfigType,
@@ -21,7 +21,7 @@ import {
   IamRoleConfigType,
 } from '@aws-accelerator/common-config/src';
 import { Account, getAccountId } from '../utils/accounts';
-import { IBucket } from '@aws-cdk/aws-s3';
+import { IBucket } from 'aws-cdk-lib/aws-s3';
 import { createPolicyName } from '@aws-accelerator/cdk-accelerator/src/core/accelerator-name-generator';
 import { CfnIamPolicyOutput, CfnIamRoleOutput, CfnIamUserOutput, CfnIamGroupOutput } from '../deployments/iam';
 

@@ -11,10 +11,10 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
-import * as iam from '@aws-cdk/aws-iam';
+import * as cdk from 'aws-cdk-lib/core';
+import * as iam from 'aws-cdk-lib/aws-iam';
 import * as path from 'path';
-import * as lambda from '@aws-cdk/aws-lambda';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
 
 const resourceType = 'Custom::TGWCreatePeeringAttachment';
 

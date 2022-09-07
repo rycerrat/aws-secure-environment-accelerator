@@ -12,15 +12,15 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@aws-cdk/aws-codebuild": "1.144.0",
-    "@aws-cdk/aws-codecommit": "1.144.0",
-    "@aws-cdk/aws-codepipeline": "1.144.0",
-    "@aws-cdk/aws-codepipeline-actions": "1.144.0",
-    "@aws-cdk/aws-iam": "1.144.0",
-    "@aws-cdk/aws-kms": "1.144.0",
-    "@aws-cdk/aws-lambda": "1.144.0",
-    "@aws-cdk/aws-s3": "1.144.0",
-    "@aws-cdk/core": "1.144.0"
+    "aws-cdk-lib/aws-codebuild": "1.144.0",
+    "aws-cdk-lib/aws-codecommit": "1.144.0",
+    "aws-cdk-lib/aws-codepipeline": "1.144.0",
+    "aws-cdk-lib/aws-codepipeline-actions": "1.144.0",
+    "aws-cdk-lib/aws-iam": "1.144.0",
+    "aws-cdk-lib/aws-kms": "1.144.0",
+    "aws-cdk-lib/aws-lambda": "1.144.0",
+    "aws-cdk-lib/aws-s3": "1.144.0",
+    "aws-cdk-lib/core": "1.144.0"
   },
   "devDependencies": {
     "@types/jest": "25.2.3",

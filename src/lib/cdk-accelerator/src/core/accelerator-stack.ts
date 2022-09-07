@@ -11,7 +11,7 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib/core';
 import { AcceleratorNameTagger, AcceleratorProtectedTagger } from '.';
 
 export interface AcceleratorStackProps extends cdk.StackProps {

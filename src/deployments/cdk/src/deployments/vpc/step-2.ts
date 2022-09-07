@@ -11,13 +11,13 @@
  *  and limitations under the License.
  */
 
-import * as ec2 from '@aws-cdk/aws-ec2';
+import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import { VpcOutputFinder } from '@aws-accelerator/common-outputs/src/vpc';
 import { StackOutput } from '@aws-accelerator/common-outputs/src/stack-output';
 import { AcceleratorConfig } from '@aws-accelerator/common-config/src';
 import { AccountStacks } from '../../common/account-stacks';
 import { AccountBuckets } from '../defaults';
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib/core';
 import { createLogGroupName } from '@aws-accelerator/cdk-accelerator/src/core/accelerator-name-generator';
 import { LogGroup } from '@aws-accelerator/custom-resource-logs-log-group';
 import { IamRoleOutputFinder } from '@aws-accelerator/common-outputs/src/iam-role';

@@ -11,10 +11,10 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
-import * as iam from '@aws-cdk/aws-iam';
-import * as s3 from '@aws-cdk/aws-s3';
-import * as ec2 from '@aws-cdk/aws-ec2';
+import * as cdk from 'aws-cdk-lib/core';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import { IInstanceProfile } from '../iam';
 import { FirewallInstance, FirewallConfigurationProps } from './instance';
 

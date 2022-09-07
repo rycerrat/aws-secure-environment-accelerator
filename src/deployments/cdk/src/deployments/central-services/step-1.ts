@@ -11,11 +11,11 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib/core';
 import * as c from '@aws-accelerator/common-config';
 import { AccountStacks } from '../../common/account-stacks';
 import { Account, getAccountId } from '../../utils/accounts';
-import * as iam from '@aws-cdk/aws-iam';
+import * as iam from 'aws-cdk-lib/aws-iam';
 
 export interface CentralServicesStep1Props {
   accountStacks: AccountStacks;

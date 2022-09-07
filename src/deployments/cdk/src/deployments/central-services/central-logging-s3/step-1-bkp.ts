@@ -11,10 +11,10 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
-import * as iam from '@aws-cdk/aws-iam';
+import * as cdk from 'aws-cdk-lib/core';
+import * as iam from 'aws-cdk-lib/aws-iam';
 import { createRoleName, createName } from '@aws-accelerator/cdk-accelerator/src/core/accelerator-name-generator';
-import * as kinesisfirehose from '@aws-cdk/aws-kinesisfirehose';
+import * as kinesisfirehose from 'aws-cdk-lib/aws-kinesisfirehose';
 import { AccountStack } from '../../../common/account-stacks';
 import { JsonOutputValue } from '../../../common/json-output';
 

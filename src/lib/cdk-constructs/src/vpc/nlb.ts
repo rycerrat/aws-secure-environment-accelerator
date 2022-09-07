@@ -11,10 +11,10 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
-import * as elb from '@aws-cdk/aws-elasticloadbalancingv2';
+import * as cdk from 'aws-cdk-lib/core';
+import * as elb from 'aws-cdk-lib/aws-elasticloadbalancingv2';
 import { ElbDeletionProtection } from '@aws-accelerator/custom-resource-elb-deletion-protection';
-import * as s3 from '@aws-cdk/aws-s3';
+import * as s3 from 'aws-cdk-lib/aws-s3';
 
 export interface NetworkLoadBalancerProps extends cdk.StackProps {
   nlbName: string;

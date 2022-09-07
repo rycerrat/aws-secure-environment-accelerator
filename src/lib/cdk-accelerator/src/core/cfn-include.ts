@@ -11,8 +11,8 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
-import * as cfn_inc from '@aws-cdk/cloudformation-include';
+import * as cdk from 'aws-cdk-lib/core';
+import * as cfn_inc from 'aws-cdk-lib/cloudformation-include';
 
 export namespace CfnInclude {
   export interface Props {

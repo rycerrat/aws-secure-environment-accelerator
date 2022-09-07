@@ -12,16 +12,16 @@
  */
 
 import * as path from 'path';
-import * as cdk from '@aws-cdk/core';
-import * as codebuild from '@aws-cdk/aws-codebuild';
-import * as iam from '@aws-cdk/aws-iam';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as s3assets from '@aws-cdk/aws-s3-assets';
-import * as secrets from '@aws-cdk/aws-secretsmanager';
-import * as dynamodb from '@aws-cdk/aws-dynamodb';
-import * as sfn from '@aws-cdk/aws-stepfunctions';
-import * as tasks from '@aws-cdk/aws-stepfunctions-tasks';
-import * as s3 from '@aws-cdk/aws-s3';
+import * as cdk from 'aws-cdk-lib/core';
+import * as codebuild from 'aws-cdk-lib/aws-codebuild';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as s3assets from 'aws-cdk-lib/aws-s3-assets';
+import * as secrets from 'aws-cdk-lib/aws-secretsmanager';
+import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
+import * as sfn from 'aws-cdk-lib/aws-stepfunctions';
+import * as tasks from 'aws-cdk-lib/aws-stepfunctions-tasks';
+import * as s3 from 'aws-cdk-lib/aws-s3';
 import { CdkDeployProject, PrebuiltCdkDeployProject } from '@aws-accelerator/cdk-accelerator/src/codebuild';
 import { AcceleratorStack, AcceleratorStackProps } from '@aws-accelerator/cdk-accelerator/src/core/accelerator-stack';
 import { createRoleName, createName } from '@aws-accelerator/cdk-accelerator/src/core/accelerator-name-generator';
@@ -32,11 +32,11 @@ import { CreateAdConnectorTask } from './tasks/create-adconnector-task';
 import { CreateStackTask } from './tasks/create-stack-task';
 import { RunAcrossAccountsTask } from './tasks/run-across-accounts-task';
 import * as fs from 'fs';
-import * as sns from '@aws-cdk/aws-sns';
+import * as sns from 'aws-cdk-lib/aws-sns';
 import { StoreOutputsTask } from './tasks/store-outputs-task';
 import { StoreOutputsToSSMTask } from './tasks/store-outputs-to-ssm-task';
 import { CDKBootstrapTask } from './tasks/cdk-bootstrap';
-import * as kms from '@aws-cdk/aws-kms';
+import * as kms from 'aws-cdk-lib/aws-kms';
 
 const VPC_CIDR_POOL_TABLE = 'cidr-vpc-assign';
 const SUBNET_CIDR_POOL_TABLE = 'cidr-subnet-assign';

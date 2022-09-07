@@ -11,8 +11,8 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
-import * as ssm from '@aws-cdk/aws-ssm';
+import * as cdk from 'aws-cdk-lib/core';
+import * as ssm from 'aws-cdk-lib/aws-ssm';
 
 export interface InventoryProps {
   bucketName: string;

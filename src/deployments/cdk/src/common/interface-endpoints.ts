@@ -11,9 +11,9 @@
  *  and limitations under the License.
  */
 
-import * as ec2 from '@aws-cdk/aws-ec2';
-import * as route53 from '@aws-cdk/aws-route53';
-import * as cdk from '@aws-cdk/core';
+import * as ec2 from 'aws-cdk-lib/aws-ec2';
+import * as route53 from 'aws-cdk-lib/aws-route53';
+import * as cdk from 'aws-cdk-lib/core';
 
 export interface InterfaceEndpointProps {
   serviceName: string;

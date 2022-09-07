@@ -12,8 +12,8 @@
  */
 
 import hashSum from 'hash-sum';
-import * as cdk from '@aws-cdk/core';
-import * as ec2 from '@aws-cdk/aws-ec2';
+import * as cdk from 'aws-cdk-lib/core';
+import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as config from '@aws-accelerator/common-config/src';
 import { Region } from '@aws-accelerator/common-types';
 import * as constructs from '@aws-accelerator/cdk-constructs/src/vpc';

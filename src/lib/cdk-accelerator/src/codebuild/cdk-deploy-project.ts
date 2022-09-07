@@ -15,10 +15,10 @@ import * as glob from 'glob';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as tempy from 'tempy';
-import * as cdk from '@aws-cdk/core';
-import * as codebuild from '@aws-cdk/aws-codebuild';
-import * as iam from '@aws-cdk/aws-iam';
-import * as s3assets from '@aws-cdk/aws-s3-assets';
+import * as cdk from 'aws-cdk-lib/core';
+import * as codebuild from 'aws-cdk-lib/aws-codebuild';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as s3assets from 'aws-cdk-lib/aws-s3-assets';
 
 export type PackageManager = 'pnpm';
 

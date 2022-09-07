@@ -11,10 +11,10 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
-import * as certificatemanager from '@aws-cdk/aws-certificatemanager';
-import * as secrets from '@aws-cdk/aws-secretsmanager';
-import * as s3 from '@aws-cdk/aws-s3';
+import * as cdk from 'aws-cdk-lib/core';
+import * as certificatemanager from 'aws-cdk-lib/aws-certificatemanager';
+import * as secrets from 'aws-cdk-lib/aws-secretsmanager';
+import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as c from '@aws-accelerator/common-config/src';
 import { AcmImportCertificate } from '@aws-accelerator/custom-resource-acm-import-certificate';
 import { AccountStacks } from '../../common/account-stacks';

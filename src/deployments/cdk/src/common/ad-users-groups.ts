@@ -11,10 +11,10 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib/core';
 import { LaunchConfiguration } from '@aws-accelerator/cdk-constructs/src/autoscaling';
 import { MadDeploymentConfig } from '@aws-accelerator/common-config/src';
-import { CfnAutoScalingGroup } from '@aws-cdk/aws-autoscaling';
+import { CfnAutoScalingGroup } from 'aws-cdk-lib/aws-autoscaling';
 import { pascalCase } from 'pascal-case';
 import { SecurityGroup } from './security-group';
 import { createIamInstanceProfileName } from './iam-assets';

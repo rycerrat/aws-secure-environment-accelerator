@@ -11,10 +11,10 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as sfn from '@aws-cdk/aws-stepfunctions';
-import * as tasks from '@aws-cdk/aws-stepfunctions-tasks';
+import * as cdk from 'aws-cdk-lib/core';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as sfn from 'aws-cdk-lib/aws-stepfunctions';
+import * as tasks from 'aws-cdk-lib/aws-stepfunctions-tasks';
 
 export namespace CodeTask {
   /**

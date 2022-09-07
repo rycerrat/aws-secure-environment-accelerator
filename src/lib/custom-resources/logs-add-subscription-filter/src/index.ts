@@ -12,10 +12,10 @@
  */
 
 import * as path from 'path';
-import * as cdk from '@aws-cdk/core';
-import * as iam from '@aws-cdk/aws-iam';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as events from '@aws-cdk/aws-events';
+import * as cdk from 'aws-cdk-lib/core';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as events from 'aws-cdk-lib/aws-events';
 
 const resourceType = 'Custom::CentralLoggingSubscriptionFilter';
 

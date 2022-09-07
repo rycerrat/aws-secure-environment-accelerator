@@ -11,12 +11,12 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
-import * as iam from '@aws-cdk/aws-iam';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as sfn from '@aws-cdk/aws-stepfunctions';
+import * as cdk from 'aws-cdk-lib/core';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as sfn from 'aws-cdk-lib/aws-stepfunctions';
 import { CodeTask } from '@aws-accelerator/cdk-accelerator/src/stepfunction-tasks';
-import * as tasks from '@aws-cdk/aws-stepfunctions-tasks';
+import * as tasks from 'aws-cdk-lib/aws-stepfunctions-tasks';
 
 export namespace StoreOutputsTask {
   export interface Props {

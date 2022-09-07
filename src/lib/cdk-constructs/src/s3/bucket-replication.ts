@@ -11,9 +11,9 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
-import * as iam from '@aws-cdk/aws-iam';
-import * as s3 from '@aws-cdk/aws-s3';
+import * as cdk from 'aws-cdk-lib/core';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as s3 from 'aws-cdk-lib/aws-s3';
 import { ReplicationRules, EncryptionConfiguration } from 'aws-sdk/clients/s3';
 import { S3PutBucketReplication } from '@aws-accelerator/custom-resource-s3-put-bucket-replication';
 

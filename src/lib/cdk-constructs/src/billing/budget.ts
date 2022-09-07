@@ -12,8 +12,8 @@
  */
 
 import hashSum from 'hash-sum';
-import * as cdk from '@aws-cdk/core';
-import * as budgets from '@aws-cdk/aws-budgets';
+import * as cdk from 'aws-cdk-lib/core';
+import * as budgets from 'aws-cdk-lib/aws-budgets';
 
 export interface BudgetProps {
   readonly budget: budgets.CfnBudget.BudgetDataProperty;

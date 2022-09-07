@@ -12,9 +12,9 @@
  */
 
 import path from 'path';
-import * as cdk from '@aws-cdk/core';
-import * as cxschema from '@aws-cdk/cloud-assembly-schema';
-import { CloudAssembly, CloudFormationStackArtifact, Environment } from '@aws-cdk/cx-api';
+import * as cdk from 'aws-cdk-lib/core';
+import * as cxschema from 'aws-cdk-lib/cloud-assembly-schema';
+import { CloudAssembly, CloudFormationStackArtifact, Environment } from 'aws-cdk-lib/cx-api';
 import { Mode, ToolkitInfo } from 'aws-cdk';
 import { setLogLevel } from 'aws-cdk/lib/logging';
 import { Bootstrapper } from 'aws-cdk/lib/api/bootstrap';
@@ -22,7 +22,7 @@ import { Command, Configuration } from 'aws-cdk/lib/settings';
 import { SdkProvider } from 'aws-cdk/lib/api/aws-auth';
 import { CloudFormationDeployments } from 'aws-cdk/lib/api/cloudformation-deployments';
 import { PluginHost } from 'aws-cdk/lib/plugin';
-import { debugModeEnabled } from '@aws-cdk/core/lib/debug';
+import { debugModeEnabled } from 'aws-cdk-lib/core/lib/debug';
 import { AssumeProfilePlugin } from '@aws-accelerator/cdk-plugin-assume-role/src/assume-role-plugin';
 import { fulfillAll } from './promise';
 import { promises as fsp } from 'fs';

@@ -11,9 +11,9 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib/core';
 import { LaunchConfiguration } from '../../src/autoscaling';
-import { CfnAutoScalingGroup } from '@aws-cdk/aws-autoscaling';
+import { CfnAutoScalingGroup } from 'aws-cdk-lib/aws-autoscaling';
 
 export interface RsysLogAutoScalingGroupProps extends cdk.StackProps {
   latestRsyslogAmiId: string;

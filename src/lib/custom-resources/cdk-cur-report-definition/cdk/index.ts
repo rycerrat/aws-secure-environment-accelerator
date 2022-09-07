@@ -12,10 +12,10 @@
  */
 
 import * as path from 'path';
-import * as cdk from '@aws-cdk/core';
-import * as iam from '@aws-cdk/aws-iam';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as s3 from '@aws-cdk/aws-s3';
+import * as cdk from 'aws-cdk-lib/core';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as s3 from 'aws-cdk-lib/aws-s3';
 import { HandlerProperties } from '@aws-accelerator/custom-resource-cur-report-definition-runtime';
 
 export type AdditionalArtifact = 'REDSHIFT' | 'QUICKSIGHT' | 'ATHENA' | string;

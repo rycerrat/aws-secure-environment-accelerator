@@ -11,11 +11,11 @@
  *  and limitations under the License.
  */
 
-import * as cdk from '@aws-cdk/core';
-import * as custom from '@aws-cdk/custom-resources';
-import * as ds from '@aws-cdk/aws-directoryservice';
-import * as iam from '@aws-cdk/aws-iam';
-import * as logs from '@aws-cdk/aws-logs';
+import * as cdk from 'aws-cdk-lib/core';
+import * as custom from 'aws-cdk-lib/custom-resources';
+import * as ds from 'aws-cdk-lib/aws-directoryservice';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as logs from 'aws-cdk-lib/aws-logs';
 
 export interface DirectoryServiceLogSubscriptionProps {
   directory: string | ds.CfnMicrosoftAD;

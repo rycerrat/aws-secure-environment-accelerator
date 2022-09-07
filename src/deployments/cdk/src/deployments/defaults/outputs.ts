@@ -12,9 +12,9 @@
  */
 
 import * as t from 'io-ts';
-import * as cdk from '@aws-cdk/core';
-import * as kms from '@aws-cdk/aws-kms';
-import * as s3 from '@aws-cdk/aws-s3';
+import * as cdk from 'aws-cdk-lib/core';
+import * as kms from 'aws-cdk-lib/aws-kms';
+import * as s3 from 'aws-cdk-lib/aws-s3';
 import { AccountStacks } from '../../common/account-stacks';
 import { AcceleratorConfig } from '@aws-accelerator/common-config/src';
 import { Account } from '../../utils/accounts';

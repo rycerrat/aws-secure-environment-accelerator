@@ -12,8 +12,8 @@
  */
 
 import hashSum from 'hash-sum';
-import * as cdk from '@aws-cdk/core';
-import * as ssm from '@aws-cdk/aws-ssm';
+import * as cdk from 'aws-cdk-lib/core';
+import * as ssm from 'aws-cdk-lib/aws-ssm';
 
 export class Document extends ssm.CfnDocument {
   constructor(scope: cdk.Construct, id: string, props: ssm.CfnDocumentProps) {
