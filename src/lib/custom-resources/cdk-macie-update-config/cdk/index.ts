@@ -26,10 +26,10 @@ export interface MacieUpdateConfigProps {
 /**
  * Custom resource implementation that turn on auto enable for Macie
  */
-export class MacieUpdateConfig extends cdk.Construct {
+export class MacieUpdateConfig extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: MacieUpdateConfigProps) {
+  constructor(scope: Construct, id: string, props: MacieUpdateConfigProps) {
     super(scope, id);
 
     const handlerProperties: HandlerProperties = props;

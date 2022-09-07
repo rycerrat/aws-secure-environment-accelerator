@@ -26,7 +26,7 @@ type Type<T> = new (...args: any[]) => T;
 
 const NAME_TAG = 'Name';
 
-function addNameTagAsIdWithSuffix<T extends cdk.Construct>(
+function addNameTagAsIdWithSuffix<T extends Construct>(
   type: Type<T>,
   suffix: string,
   tagPriority: number = 100,

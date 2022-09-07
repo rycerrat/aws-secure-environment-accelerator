@@ -29,11 +29,11 @@ export type MEc2AcceptVpcEndpointConnectionProps = Omit<Ec2AcceptVpcEndpointConn
 /**
  * Custom resource that will create SSM Document.
  */
-export class Ec2AcceptVpcEndpointConnection extends cdk.Construct {
+export class Ec2AcceptVpcEndpointConnection extends Construct {
   private readonly resource: cdk.CustomResource;
   private role: iam.IRole;
 
-  constructor(scope: cdk.Construct, id: string, props: Ec2AcceptVpcEndpointConnectionProps) {
+  constructor(scope: Construct, id: string, props: Ec2AcceptVpcEndpointConnectionProps) {
     super(scope, id);
     this.role = iam.Role.fromRoleArn(this, `${resourceType}Role`, props.roleArn);
 

@@ -27,10 +27,10 @@ export interface FMSNotificationChannelProps {
 /**
  * Custom resource implementation that Create SNS Topic notification channel
  */
-export class FMSNotificationChannel extends cdk.Construct {
+export class FMSNotificationChannel extends Construct {
   private readonly resource: cdk.CustomResource;
   private role: iam.IRole;
-  constructor(scope: cdk.Construct, id: string, props: FMSNotificationChannelProps) {
+  constructor(scope: Construct, id: string, props: FMSNotificationChannelProps) {
     super(scope, id);
 
     this.role = iam.Role.fromRoleArn(this, `${resourceType}Role`, props.roleArn);

@@ -13,6 +13,7 @@
 
 import * as cdk from 'aws-cdk-lib';
 import * as ram from 'aws-cdk-lib/aws-ram';
+import { Construct } from 'constructs';
 
 export interface TransitGatewaySharingProps {
   name: string;
@@ -20,8 +21,8 @@ export interface TransitGatewaySharingProps {
   principals: string[];
 }
 
-export class TransitGatewaySharing extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, props: TransitGatewaySharingProps) {
+export class TransitGatewaySharing extends Construct {
+  constructor(scope: Construct, id: string, props: TransitGatewaySharingProps) {
     super(scope, id);
 
     new ram.CfnResourceShare(this, 'Resource', {

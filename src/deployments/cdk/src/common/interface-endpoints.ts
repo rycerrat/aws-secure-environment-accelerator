@@ -14,6 +14,7 @@
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as route53 from 'aws-cdk-lib/aws-route53';
 import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 
 export interface InterfaceEndpointProps {
   serviceName: string;
@@ -34,9 +35,9 @@ enum ProtocolPrefix {
  * Auxiliary construct that represents all the resources needed to create a single interface endpoint. It contains a
  * SecurityGroup, VPCEndpoint, HostedZone and RecordSet.
  */
-export class InterfaceEndpoint extends cdk.Construct {
+export class InterfaceEndpoint extends Construct {
   private _hostedZone: route53.CfnHostedZone;
-  constructor(scope: cdk.Construct, id: string, props: InterfaceEndpointProps) {
+  constructor(scope: Construct, id: string, props: InterfaceEndpointProps) {
     super(scope, id);
 
     const { serviceName, vpcId, vpcRegion, subnetIds, allowedCidrs, ports } = props;

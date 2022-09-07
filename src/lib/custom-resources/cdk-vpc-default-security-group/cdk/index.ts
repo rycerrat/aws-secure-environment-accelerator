@@ -25,10 +25,10 @@ export interface VpcDefaultSecurityGroupProps {
 /**
  * Custom resource implementation that delete inbound and outbound rules of default security group
  */
-export class VpcDefaultSecurityGroup extends cdk.Construct {
+export class VpcDefaultSecurityGroup extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: VpcDefaultSecurityGroupProps) {
+  constructor(scope: Construct, id: string, props: VpcDefaultSecurityGroupProps) {
     super(scope, id);
 
     const lambdaPath = require.resolve('@aws-accelerator/custom-resource-vpc-default-security-group-runtime');

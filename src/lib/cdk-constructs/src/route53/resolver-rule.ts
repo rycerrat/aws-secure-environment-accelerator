@@ -26,10 +26,10 @@ export interface ResolverRuleProps {
 /**
  * Auxiliary construct that creates a Route53 resolver rule for the and associates it with the given VPC.
  */
-export class ResolverRule extends cdk.Construct {
+export class ResolverRule extends Construct {
   private readonly rule: r53Resolver.CfnResolverRule;
 
-  constructor(parent: cdk.Construct, id: string, props: ResolverRuleProps) {
+  constructor(parent: Construct, id: string, props: ResolverRuleProps) {
     super(parent, id);
     const targetIps = props.ipAddresses.map(ip => ({
       ip,

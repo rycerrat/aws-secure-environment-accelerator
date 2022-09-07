@@ -21,6 +21,7 @@ import { VpnTunnelOptions } from '@aws-accelerator/custom-resource-ec2-vpn-tunne
 import { VpnAttachments } from '@aws-accelerator/custom-resource-ec2-vpn-attachment';
 import { AccountStacks } from '../../../common/account-stacks';
 import { AddTagsToResourcesOutput, AddTagsToResource } from '../../../common/add-tags-to-resources-output';
+import { Construct } from 'constructs';
 import {
   FirewallPort,
   FirewallVpnConnection,
@@ -114,7 +115,7 @@ export async function step2(props: FirewallStep2Props) {
  * Create customer gateway and VPN connections for the firewall EIPs of step 1 or customer provided ips from configuration file.
  */
 async function createCustomerGateways(props: {
-  scope: cdk.Construct;
+  scope: Construct;
   firewallAccountKey: string;
   firewallConfig: c.FirewallEC2ConfigType | c.FirewallCGWConfigType;
   transitGateway: TransitGatewayOutput;

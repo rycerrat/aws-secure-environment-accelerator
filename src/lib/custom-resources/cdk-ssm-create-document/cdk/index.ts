@@ -30,10 +30,10 @@ export type SSMDocumentRuntimeProps = Omit<SSMDocumentProps, 'roleArn'>;
 /**
  * Custom resource that will create SSM Document.
  */
-export class SSMDocument extends cdk.Construct {
+export class SSMDocument extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: SSMDocumentProps) {
+  constructor(scope: Construct, id: string, props: SSMDocumentProps) {
     super(scope, id);
 
     const runtimeProps: SSMDocumentRuntimeProps = props;

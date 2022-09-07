@@ -15,6 +15,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as sfn from 'aws-cdk-lib/aws-stepfunctions';
 import { CodeTask } from './code-task';
+import { Construct } from 'constructs';
 
 export namespace LoopTask {
   export type FunctionProps = Partial<Omit<CodeTask.FunctionProps, 'code'>>;
@@ -67,7 +68,7 @@ export class LoopTask extends sfn.StateMachineFragment {
   private readonly deploy: CodeTask;
   private readonly verify: CodeTask;
 
-  constructor(scope: cdk.Construct, id: string, props: LoopTask.Props) {
+  constructor(scope: Construct, id: string, props: LoopTask.Props) {
     super(scope, id);
     const {
       functionPayload,

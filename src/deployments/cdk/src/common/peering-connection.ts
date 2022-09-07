@@ -19,6 +19,7 @@ import { getVpcConfig } from './get-all-vpcs';
 import { StructuredOutput } from './structured-output';
 import { PcxOutput, PcxOutputType } from '../deployments/vpc-peering/outputs';
 import { VpcOutputFinder } from '@aws-accelerator/common-outputs/src/vpc';
+import { Construct } from 'constructs';
 
 export namespace PeeringConnection {
   export interface PeeringConnectionRoutesProps {
@@ -41,8 +42,8 @@ export namespace PeeringConnection {
     outputs: StackOutput[];
   }
 
-  export class PeeringConnectionRoutes extends cdk.Construct {
-    constructor(scope: cdk.Construct, id: string, props: PeeringConnectionRoutesProps) {
+  export class PeeringConnectionRoutes extends Construct {
+    constructor(scope: Construct, id: string, props: PeeringConnectionRoutesProps) {
       super(scope, id);
 
       const { accountKey, vpcName, vpcConfigs, outputs } = props;

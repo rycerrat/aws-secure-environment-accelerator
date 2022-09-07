@@ -18,10 +18,10 @@ import * as iam from 'aws-cdk-lib/aws-iam';
 /**
  * Custom resource implementation that retrive Organization Ids
  */
-export class Organizations extends cdk.Construct {
+export class Organizations extends Construct {
   private readonly resource: custom.AwsCustomResource;
 
-  constructor(scope: cdk.Construct, id: string) {
+  constructor(scope: Construct, id: string) {
     super(scope, id);
 
     const physicalResourceId = custom.PhysicalResourceId.of('DescribeOrganization');

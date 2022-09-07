@@ -31,10 +31,10 @@ export interface SSMSessionManagerDocumentProps {
 /**
  * Custom resource that will create SSM Document.
  */
-export class SSMSessionManagerDocument extends cdk.Construct {
+export class SSMSessionManagerDocument extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: SSMSessionManagerDocumentProps) {
+  constructor(scope: Construct, id: string, props: SSMSessionManagerDocumentProps) {
     super(scope, id);
     const {
       cloudWatchEncryptionEnabled,

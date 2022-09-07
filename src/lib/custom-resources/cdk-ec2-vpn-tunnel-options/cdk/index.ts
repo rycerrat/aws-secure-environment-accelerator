@@ -49,10 +49,10 @@ export type Attribute =
 /**
  * Custom resource that has an VPN tunnel options attribute for the VPN connection with the given ID.
  */
-export class VpnTunnelOptions extends cdk.Construct {
+export class VpnTunnelOptions extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: VpnTunnelOptionsProps) {
+  constructor(scope: Construct, id: string, props: VpnTunnelOptionsProps) {
     super(scope, id);
 
     const lambdaPath = require.resolve('@aws-accelerator/custom-resource-ec2-vpn-tunnel-options-runtime');

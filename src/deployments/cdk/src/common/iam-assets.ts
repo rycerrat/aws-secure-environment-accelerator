@@ -24,6 +24,7 @@ import { Account, getAccountId } from '../utils/accounts';
 import { IBucket } from 'aws-cdk-lib/aws-s3';
 import { createPolicyName } from '@aws-accelerator/cdk-accelerator/src/core/accelerator-name-generator';
 import { CfnIamPolicyOutput, CfnIamRoleOutput, CfnIamUserOutput, CfnIamGroupOutput } from '../deployments/iam';
+import { Construct } from 'constructs';
 
 export interface IamAssetsProps {
   accountKey: string;
@@ -35,8 +36,8 @@ export interface IamAssetsProps {
   aesLogBucket: IBucket;
 }
 
-export class IamAssets extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, props: IamAssetsProps) {
+export class IamAssets extends Construct {
+  constructor(scope: Construct, id: string, props: IamAssetsProps) {
     super(scope, id);
     const { accountKey, iamConfig, iamPoliciesDefinition, accounts, userPasswords, logBucket, aesLogBucket } = props;
 

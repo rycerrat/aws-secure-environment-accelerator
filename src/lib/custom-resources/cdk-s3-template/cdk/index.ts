@@ -30,10 +30,10 @@ export interface S3TemplateProps {
 /**
  * Custom resource that has an VPN tunnel options attribute for the VPN connection with the given ID.
  */
-export class S3Template extends cdk.Construct {
+export class S3Template extends Construct {
   private readonly handlerProperties: HandlerProperties;
 
-  constructor(scope: cdk.Construct, id: string, props: S3TemplateProps) {
+  constructor(scope: Construct, id: string, props: S3TemplateProps) {
     super(scope, id);
 
     this.handlerProperties = {

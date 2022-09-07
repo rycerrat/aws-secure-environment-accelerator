@@ -29,11 +29,11 @@ export type ModifyVpcEndpointServicePermissionseProps = Omit<ModifyVpcEndpointSe
 /**
  * Custom resource that will create SSM Document.
  */
-export class ModifyVpcEndpointServicePermissions extends cdk.Construct {
+export class ModifyVpcEndpointServicePermissions extends Construct {
   private readonly resource: cdk.CustomResource;
   private role: iam.IRole;
 
-  constructor(scope: cdk.Construct, id: string, props: ModifyVpcEndpointServicePermissionsProps) {
+  constructor(scope: Construct, id: string, props: ModifyVpcEndpointServicePermissionsProps) {
     super(scope, id);
     this.role = iam.Role.fromRoleArn(this, `${resourceType}Role`, props.roleArn);
 

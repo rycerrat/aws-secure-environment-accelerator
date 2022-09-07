@@ -24,10 +24,10 @@ export interface InstanceLaunchTimeProps {
 /**
  * Custom resource implementation that get EC2 instance status.
  */
-export class InstanceLaunchTime extends cdk.Construct {
+export class InstanceLaunchTime extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: InstanceLaunchTimeProps) {
+  constructor(scope: Construct, id: string, props: InstanceLaunchTimeProps) {
     super(scope, id);
 
     const lambdaPath = require.resolve('@aws-accelerator/custom-resource-ec2-launch-time-runtime');

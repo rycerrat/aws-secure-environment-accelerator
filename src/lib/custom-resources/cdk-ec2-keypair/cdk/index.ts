@@ -25,12 +25,12 @@ export interface KeypairProps {
   roleName?: string;
 }
 
-export class Keypair extends cdk.Construct implements cdk.ITaggable {
+export class Keypair extends Construct implements cdk.ITaggable {
   tags: cdk.TagManager = new cdk.TagManager(cdk.TagType.KEY_VALUE, 'Keypair');
 
   private resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, private readonly props: KeypairProps) {
+  constructor(scope: Construct, id: string, private readonly props: KeypairProps) {
     super(scope, id);
 
     this.tags.setTag('Name', props.name);

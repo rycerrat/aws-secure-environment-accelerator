@@ -20,6 +20,7 @@ import { AcmImportCertificate } from '@aws-accelerator/custom-resource-acm-impor
 import { AccountStacks } from '../../common/account-stacks';
 import { pascalCase } from 'pascal-case';
 import { createCertificateSecretName, CfnAcmOutput } from './outputs';
+import { Construct } from 'constructs';
 
 export interface CertificatesStep1Props {
   accountStacks: AccountStacks;
@@ -54,7 +55,7 @@ export async function step1(props: CertificatesStep1Props) {
 function createCertificate(props: {
   centralBucket: s3.IBucket;
   certificate: c.CertificateConfig;
-  scope: cdk.Construct;
+  scope: Construct;
 }) {
   const { scope, centralBucket, certificate } = props;
 

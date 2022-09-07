@@ -30,6 +30,7 @@ import { CfnLogDestinationOutput } from './outputs';
 import * as kms from 'aws-cdk-lib/aws-kms';
 import { LogBucketOutputTypeOutputFinder } from '@aws-accelerator/common-outputs/src/buckets';
 import { DefaultKmsOutputFinder } from '@aws-accelerator/common-outputs/src/kms';
+import { Construct } from 'constructs';
 
 import path from 'path';
 
@@ -129,7 +130,7 @@ export async function step1(props: CentralLoggingToS3Step1Props) {
  * 5.15b - READY - Centralize CWL - Part 2
  */
 async function cwlSettingsInLogArchive(props: {
-  scope: cdk.Construct;
+  scope: Construct;
   bucketArn: string;
   logStreamRoleArn: string;
   kinesisStreamRoleArn: string;

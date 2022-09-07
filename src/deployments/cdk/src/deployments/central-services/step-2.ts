@@ -20,6 +20,7 @@ import { IamCreateRole } from '@aws-accelerator/custom-resource-iam-create-role'
 import { Context } from '../../utils/context';
 import { StackOutput } from '@aws-accelerator/common-outputs/src/stack-output';
 import { IamRoleOutputFinder } from '@aws-accelerator/common-outputs/src/iam-role';
+import { Construct } from 'constructs';
 
 export interface CentralServicesStep2Props {
   accountStacks: AccountStacks;
@@ -120,7 +121,7 @@ export async function step2(props: CentralServicesStep2Props) {
 /**
  * Central CloudWatch Services Settings in Sub Account
  */
-async function centralLoggingMonitoringEnable(props: { scope: cdk.Construct }) {
+async function centralLoggingMonitoringEnable(props: { scope: Construct }) {
   const { scope } = props;
   new iam.CfnServiceLinkedRole(scope, 'CloudWatch-CrossAccountSharingEnable', {
     awsServiceName: 'cloudwatch-crossaccount.amazonaws.com',
@@ -133,7 +134,7 @@ async function centralLoggingMonitoringEnable(props: { scope: cdk.Construct }) {
  * Share Cloud Watch Log Data settings in Sub Account to Monitoring Accounts
  */
 async function centralLoggingShareDataSettings(props: {
-  scope: cdk.Construct;
+  scope: Construct;
   monitoringAccountIds: string[];
   accessLevel: string;
   tagValue: string;

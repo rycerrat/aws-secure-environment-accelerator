@@ -48,10 +48,10 @@ export interface GrantProps {
   roleName?: string;
 }
 
-export class Grant extends cdk.Construct {
+export class Grant extends Construct {
   private resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, private readonly props: GrantProps) {
+  constructor(scope: Construct, id: string, private readonly props: GrantProps) {
     super(scope, id);
 
     const handlerProperties: HandlerProperties = {

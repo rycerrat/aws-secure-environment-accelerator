@@ -23,11 +23,11 @@ export interface ElbDeletionProtectionProps {
 /**
  * Custom resource implementation that Enables Deletion Protection on LoadBalancer.
  */
-export class ElbDeletionProtection extends cdk.Construct {
+export class ElbDeletionProtection extends Construct {
   private readonly loadBalancerName: string;
   private readonly loadBalancerArn: string;
 
-  constructor(scope: cdk.Construct, id: string, props: ElbDeletionProtectionProps) {
+  constructor(scope: Construct, id: string, props: ElbDeletionProtectionProps) {
     super(scope, id);
     this.loadBalancerName = props.loadBalancerName;
     this.loadBalancerArn = props.loadBalancerArn;

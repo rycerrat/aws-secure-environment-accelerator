@@ -30,11 +30,11 @@ export interface TransitGatewayCreatePeeringAttachmentProps {
 /**
  * Custom resource implementation that creates transit gateway peering attachment
  */
-export class TransitGatewayCreatePeeringAttachment extends cdk.Construct {
+export class TransitGatewayCreatePeeringAttachment extends Construct {
   private readonly resource: cdk.CustomResource;
   private readonly role: iam.IRole;
 
-  constructor(scope: cdk.Construct, id: string, props: TransitGatewayCreatePeeringAttachmentProps) {
+  constructor(scope: Construct, id: string, props: TransitGatewayCreatePeeringAttachmentProps) {
     super(scope, id);
 
     const { transitGatewayId, targetTransitGatewayId, targetAccountId, targetRegion, tagValue } = props;

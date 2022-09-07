@@ -31,8 +31,8 @@ export interface IamCreateRoleProperties {
 /**
  * Custom resource implementation that creates IAM role
  */
-export class IamCreateRole extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, props: IamCreateRoleProperties) {
+export class IamCreateRole extends Construct {
+  constructor(scope: Construct, id: string, props: IamCreateRoleProperties) {
     super(scope, id);
 
     const { roleName, accountIds, managedPolicies, tagName, tagValue, lambdaRoleArn, rootOuId } = props;

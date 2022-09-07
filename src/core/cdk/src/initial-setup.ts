@@ -31,6 +31,7 @@ import { CreateOrganizationAccountTask } from './tasks/create-organization-accou
 import { CreateAdConnectorTask } from './tasks/create-adconnector-task';
 import { CreateStackTask } from './tasks/create-stack-task';
 import { RunAcrossAccountsTask } from './tasks/run-across-accounts-task';
+import { Construct } from 'constructs';
 import * as fs from 'fs';
 import * as sns from 'aws-cdk-lib/aws-sns';
 import { StoreOutputsTask } from './tasks/store-outputs-task';
@@ -71,7 +72,7 @@ export namespace InitialSetup {
 }
 
 export class InitialSetup extends AcceleratorStack {
-  constructor(scope: cdk.Construct, id: string, props: InitialSetup.Props) {
+  constructor(scope: Construct, id: string, props: InitialSetup.Props) {
     super(scope, id, props);
 
     new InitialSetup.Pipeline(this, 'Pipeline', props);
@@ -81,8 +82,8 @@ export class InitialSetup extends AcceleratorStack {
 export namespace InitialSetup {
   export type PipelineProps = CommonProps;
 
-  export class Pipeline extends cdk.Construct {
-    constructor(scope: cdk.Construct, id: string, props: PipelineProps) {
+  export class Pipeline extends Construct {
+    constructor(scope: Construct, id: string, props: PipelineProps) {
       super(scope, id);
 
       const { enablePrebuiltProject } = props;

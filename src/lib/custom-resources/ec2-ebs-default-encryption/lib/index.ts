@@ -24,8 +24,8 @@ export interface EbsDefaultEncryptionProps {
   key: kms.IKey;
 }
 
-export class EbsDefaultEncryption extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, private readonly props: EbsDefaultEncryptionProps) {
+export class EbsDefaultEncryption extends Construct {
+  constructor(scope: Construct, id: string, private readonly props: EbsDefaultEncryptionProps) {
     super(scope, id);
 
     const handlerProperties: HandlerProperties = {

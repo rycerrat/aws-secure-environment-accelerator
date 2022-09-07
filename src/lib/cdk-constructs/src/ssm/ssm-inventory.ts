@@ -13,6 +13,7 @@
 
 import * as cdk from 'aws-cdk-lib';
 import * as ssm from 'aws-cdk-lib/aws-ssm';
+import { Construct } from 'constructs';
 
 export interface InventoryProps {
   bucketName: string;
@@ -21,8 +22,8 @@ export interface InventoryProps {
   prefix: string;
 }
 
-export class GatherInventory extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, private readonly props: InventoryProps) {
+export class GatherInventory extends Construct {
+  constructor(scope: Construct, id: string, private readonly props: InventoryProps) {
     super(scope, id);
 
     new ssm.CfnResourceDataSync(this, 'ResourceDataSync', {

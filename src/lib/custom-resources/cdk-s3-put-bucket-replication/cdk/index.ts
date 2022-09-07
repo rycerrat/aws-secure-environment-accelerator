@@ -30,11 +30,11 @@ export type S3PutBucketReplicationRuntimeProps = Omit<S3PutBucketReplicationProp
 /**
  * Custom resource that will create SSM Document.
  */
-export class S3PutBucketReplication extends cdk.Construct {
+export class S3PutBucketReplication extends Construct {
   private readonly resource: cdk.CustomResource;
   private role: iam.IRole;
 
-  constructor(scope: cdk.Construct, id: string, props: S3PutBucketReplicationProps) {
+  constructor(scope: Construct, id: string, props: S3PutBucketReplicationProps) {
     super(scope, id);
     this.role = iam.Role.fromRoleArn(this, `${resourceType}Role`, props.roleArn);
 

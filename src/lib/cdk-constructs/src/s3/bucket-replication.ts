@@ -16,6 +16,7 @@ import * as iam from 'aws-cdk-lib/aws-iam';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import { ReplicationRules, EncryptionConfiguration } from 'aws-sdk/clients/s3';
 import { S3PutBucketReplication } from '@aws-accelerator/custom-resource-s3-put-bucket-replication';
+import { Construct } from 'constructs';
 
 export interface BucketReplicationProps {
   bucket: s3.IBucket;
@@ -30,7 +31,7 @@ export interface BucketReplicationProps {
  * Wrapper around s3.Bucket that has additional information about the bucket, such as the resolved bucket ARN, the
  * resolved encryption key ARN, the resolved account ID. This allows it to be used in cross account replication.s
  */
-export class BucketReplication extends cdk.Construct {
+export class BucketReplication extends Construct {
   private readonly resource: s3.CfnBucket;
 
   private readonly replicationRoleName: string | undefined;
@@ -40,7 +41,7 @@ export class BucketReplication extends cdk.Construct {
   private readonly s3PutReplicationRole: string;
   private bucket: s3.IBucket;
 
-  constructor(scope: cdk.Construct, id: string, props: BucketReplicationProps) {
+  constructor(scope: Construct, id: string, props: BucketReplicationProps) {
     super(scope, id);
     this.replicationRoleName = props.replicationRoleName;
     this.bucket = props.bucket;

@@ -17,6 +17,7 @@ import { SecurityGroup, Subnet } from '../vpc';
 import { CfnSleep } from '@aws-accelerator/custom-resource-cfn-sleep';
 import { EC2DisableApiTermination } from '@aws-accelerator/custom-resource-ec2-disable-api-termination';
 import { EC2ModifyMetadataOptions } from '@aws-accelerator/custom-resource-ec2-modify-metadata-options';
+import { Construct } from 'constructs';
 
 export interface FirewallManagerProps {
   name: string;
@@ -33,11 +34,11 @@ export interface FirewallManagerProps {
   iamInstanceProfile?: string;
 }
 
-export class FirewallManager extends cdk.Construct {
+export class FirewallManager extends Construct {
   private readonly resource: ec2.CfnInstance;
   private readonly networkInterfacesProps: ec2.CfnInstance.NetworkInterfaceProperty[] = [];
 
-  constructor(scope: cdk.Construct, id: string, private readonly props: FirewallManagerProps) {
+  constructor(scope: Construct, id: string, private readonly props: FirewallManagerProps) {
     super(scope, id);
 
     this.resource = new ec2.CfnInstance(this, 'Resource', {

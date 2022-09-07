@@ -230,7 +230,7 @@ export function createAsg(
   });
 }
 
-export function createTargetGroupForInstance(scope: cdk.Construct, targetGroupName: string, vpcId: string) {
+export function createTargetGroupForInstance(scope: Construct, targetGroupName: string, vpcId: string) {
   return new nlb.CfnTargetGroup(scope, `TgRsyslog${targetGroupName}`, {
     name: targetGroupName,
     targetType: 'instance',

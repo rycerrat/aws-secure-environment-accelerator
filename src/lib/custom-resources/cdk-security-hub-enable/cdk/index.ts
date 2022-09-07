@@ -26,10 +26,10 @@ export interface SecurityHubEnableProps {
 /**
  * Custom resource that will enable SecurityHub and disable controls.
  */
-export class SecurityHubEnable extends cdk.Construct {
+export class SecurityHubEnable extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: SecurityHubEnableProps) {
+  constructor(scope: Construct, id: string, props: SecurityHubEnableProps) {
     super(scope, id);
 
     const enableHub = this.lambdaFunction(props.roleArn);

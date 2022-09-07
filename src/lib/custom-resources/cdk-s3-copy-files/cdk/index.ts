@@ -44,8 +44,8 @@ export interface S3CopyFilesProps {
 /**
  * Custom resource that has an VPN tunnel options attribute for the VPN connection with the given ID.
  */
-export class S3CopyFiles extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, private readonly props: S3CopyFilesProps) {
+export class S3CopyFiles extends Construct {
+  constructor(scope: Construct, id: string, private readonly props: S3CopyFilesProps) {
     super(scope, id);
 
     props.destinationBucket.grantReadWrite(this.role);

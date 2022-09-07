@@ -18,7 +18,8 @@ import * as targets from 'aws-cdk-lib/aws-events-targets';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import { DynamoEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
-import { Construct, RemovalPolicy, Duration } from 'aws-cdk-lib/core';
+import { RemovalPolicy, Duration } from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 
 import path from 'path';
 

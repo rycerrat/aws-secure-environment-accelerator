@@ -28,10 +28,10 @@ export interface MacieExportConfigProps {
 /**
  * Custom resource implementation that set Macie classification export config
  */
-export class MacieExportConfig extends cdk.Construct {
+export class MacieExportConfig extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: MacieExportConfigProps) {
+  constructor(scope: Construct, id: string, props: MacieExportConfigProps) {
     super(scope, id);
 
     const handlerProperties: HandlerProperties = props;

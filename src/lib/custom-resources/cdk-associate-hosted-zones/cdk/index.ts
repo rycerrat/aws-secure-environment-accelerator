@@ -38,11 +38,11 @@ export type AssociateHostedZonesRuntimeProps = Omit<AssociateHostedZonesProps, '
 /**
  * Custom resource that will create SSM Document.
  */
-export class AssociateHostedZones extends cdk.Construct {
+export class AssociateHostedZones extends Construct {
   private readonly resource: cdk.CustomResource;
   private role: iam.IRole;
 
-  constructor(scope: cdk.Construct, id: string, props: AssociateHostedZonesProps) {
+  constructor(scope: Construct, id: string, props: AssociateHostedZonesProps) {
     super(scope, id);
     this.role = iam.Role.fromRoleArn(this, `${resourceType}Role`, props.roleArn);
 

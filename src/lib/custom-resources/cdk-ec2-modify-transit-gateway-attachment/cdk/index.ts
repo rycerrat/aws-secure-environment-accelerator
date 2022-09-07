@@ -30,11 +30,11 @@ export type ModifyTransitGatewayAttachmentRuntimeProps = Omit<ModifyTransitGatew
 /**
  * Custom resource that will create SSM Document.
  */
-export class ModifyTransitGatewayAttachment extends cdk.Construct {
+export class ModifyTransitGatewayAttachment extends Construct {
   private readonly resource: cdk.CustomResource;
   private role: iam.IRole;
 
-  constructor(scope: cdk.Construct, id: string, props: ModifyTransitGatewayAttachmentProps) {
+  constructor(scope: Construct, id: string, props: ModifyTransitGatewayAttachmentProps) {
     super(scope, id);
     this.role = iam.Role.fromRoleArn(this, `${resourceType}Role`, props.roleArn);
 

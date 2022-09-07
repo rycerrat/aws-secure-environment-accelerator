@@ -13,6 +13,7 @@
 
 import * as cdk from 'aws-cdk-lib';
 import { AcceleratorNameTagger, AcceleratorProtectedTagger } from '.';
+import { Construct } from 'constructs';
 
 export interface AcceleratorStackProps extends cdk.StackProps {
   acceleratorName: string;
@@ -23,7 +24,7 @@ export class AcceleratorStack extends cdk.Stack {
   readonly acceleratorName: string;
   readonly acceleratorPrefix: string;
 
-  constructor(scope: cdk.Construct, id: string, props: AcceleratorStackProps) {
+  constructor(scope: Construct, id: string, props: AcceleratorStackProps) {
     super(scope, id, props);
 
     this.acceleratorName = props.acceleratorName;

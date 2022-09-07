@@ -23,10 +23,10 @@ export interface VpnAttachmentsProps {
 /**
  * Custom resource implementation that retrive IPs for a created DNS Endpoint.
  */
-export class VpnAttachments extends cdk.Construct {
+export class VpnAttachments extends Construct {
   private readonly resource: custom.AwsCustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: VpnAttachmentsProps) {
+  constructor(scope: Construct, id: string, props: VpnAttachmentsProps) {
     super(scope, id);
     const { vpnConnectionId } = props;
 

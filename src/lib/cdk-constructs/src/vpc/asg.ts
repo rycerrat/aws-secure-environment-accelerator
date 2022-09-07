@@ -14,6 +14,7 @@
 import * as cdk from 'aws-cdk-lib';
 import { LaunchConfiguration } from '../../src/autoscaling';
 import { CfnAutoScalingGroup } from 'aws-cdk-lib/aws-autoscaling';
+import { Construct } from 'constructs';
 
 export interface RsysLogAutoScalingGroupProps extends cdk.StackProps {
   latestRsyslogAmiId: string;
@@ -35,8 +36,8 @@ export interface RsysLogAutoScalingGroupProps extends cdk.StackProps {
   userData?: string;
 }
 
-export class RsysLogAutoScalingGroup extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, props: RsysLogAutoScalingGroupProps) {
+export class RsysLogAutoScalingGroup extends Construct {
+  constructor(scope: Construct, id: string, props: RsysLogAutoScalingGroupProps) {
     super(scope, id);
 
     const launchConfig = new LaunchConfiguration(this, 'RsyslogLaunchConfiguration', {

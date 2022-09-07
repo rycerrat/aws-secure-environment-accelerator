@@ -45,6 +45,7 @@ import {
 } from '@aws-accelerator/common-outputs/src/cidr-pools';
 import { Nfw } from './nfw';
 import { AlbIpForwarding } from './alb-ip-forwarding';
+import { Construct } from 'constructs';
 
 export interface VpcCommonProps {
   /**
@@ -140,7 +141,7 @@ export interface VpcProps extends VpcCommonProps {
 export class VpcStack extends cdk.NestedStack {
   readonly vpc: Vpc;
 
-  constructor(scope: cdk.Construct, name: string, props: VpcProps) {
+  constructor(scope: Construct, name: string, props: VpcProps) {
     super(scope, name);
 
     // Create the VPC
@@ -156,7 +157,7 @@ export class VpcStack extends cdk.NestedStack {
  *
  * TODO: Decouple this class from the configuration file.
  */
-export class Vpc extends cdk.Construct implements constructs.Vpc {
+export class Vpc extends Construct implements constructs.Vpc {
   readonly name: string;
   readonly region: Region;
 
@@ -174,7 +175,7 @@ export class Vpc extends cdk.Construct implements constructs.Vpc {
   readonly nfw?: Nfw;
   readonly ddbKmsKey: string;
 
-  constructor(scope: cdk.Construct, name: string, vpcProps: VpcProps) {
+  constructor(scope: Construct, name: string, vpcProps: VpcProps) {
     super(scope, name);
 
     const props = { vpcProps };

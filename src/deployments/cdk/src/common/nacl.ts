@@ -34,8 +34,8 @@ export interface NaclProps {
   subnetPools: AssignedSubnetCidrPool[];
 }
 
-export class Nacl extends cdk.Construct {
-  constructor(parent: cdk.Construct, name: string, props: NaclProps) {
+export class Nacl extends Construct {
+  constructor(parent: Construct, name: string, props: NaclProps) {
     super(parent, name);
     const { accountKey, vpcConfig, vpcId, subnetConfig, subnets, vpcConfigs, vpcPools, subnetPools } = props;
     const naclRules = subnetConfig.nacls;

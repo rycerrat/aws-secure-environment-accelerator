@@ -26,10 +26,10 @@ export interface GuardDutyAdminProps {
 /**
  * Custom resource implementation that enable admin for Guard Duty
  */
-export class GuardDutyAdmin extends cdk.Construct {
+export class GuardDutyAdmin extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: GuardDutyAdminProps) {
+  constructor(scope: Construct, id: string, props: GuardDutyAdminProps) {
     super(scope, id);
 
     const handlerProperties: HandlerProperties = {

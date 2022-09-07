@@ -32,8 +32,8 @@ export interface PasswordPolicyProperties {
 /**
  * Custom resource implementation that set/update IAM account password policy
  */
-export class IamPasswordPolicy extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, props: PasswordPolicyProperties) {
+export class IamPasswordPolicy extends Construct {
+  constructor(scope: Construct, id: string, props: PasswordPolicyProperties) {
     super(scope, id);
 
     const {

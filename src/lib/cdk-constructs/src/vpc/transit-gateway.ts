@@ -24,13 +24,13 @@ export interface TransitGatewayProps {
   autoAcceptSharedAttachments?: boolean;
 }
 
-export class TransitGateway extends cdk.Construct {
+export class TransitGateway extends Construct {
   readonly resource: ec2.CfnTransitGateway;
   readonly tgwRouteTableNameToIdMap: { [routeTableName: string]: string } = {};
 
   private readonly routeTables: ec2.CfnTransitGatewayRouteTable[] = [];
 
-  constructor(parent: cdk.Construct, id: string, private readonly props: TransitGatewayProps) {
+  constructor(parent: Construct, id: string, private readonly props: TransitGatewayProps) {
     super(parent, id);
 
     this.resource = new ec2.CfnTransitGateway(this, 'Resource', {

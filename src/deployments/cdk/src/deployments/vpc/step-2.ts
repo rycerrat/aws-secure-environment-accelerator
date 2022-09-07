@@ -22,6 +22,7 @@ import { createLogGroupName } from '@aws-accelerator/cdk-accelerator/src/core/ac
 import { LogGroup } from '@aws-accelerator/custom-resource-logs-log-group';
 import { IamRoleOutputFinder } from '@aws-accelerator/common-outputs/src/iam-role';
 import { NONE_DESTINATION_TYPE, S3_DESTINATION_TYPE, BOTH_DESTINATION_TYPE } from './outputs';
+import { Construct } from 'constructs';
 
 export interface VpcStep2Props {
   accountBuckets: AccountBuckets;
@@ -134,7 +135,7 @@ function createFlowLogs(props: VpcStep2Props) {
  * @param props
  */
 function createVpcFlowLog(props: {
-  scope: cdk.Construct;
+  scope: Construct;
   vpcName: string;
   roleArn: string;
   vpcId: string;

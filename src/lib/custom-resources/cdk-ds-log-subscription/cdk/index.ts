@@ -28,8 +28,8 @@ export type LogGroupOrName = string | logs.LogGroup | logs.CfnLogGroup;
 /**
  * Custom resource implementation that creates log subscription for directory service.
  */
-export class DirectoryServiceLogSubscription extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, props: DirectoryServiceLogSubscriptionProps) {
+export class DirectoryServiceLogSubscription extends Construct {
+  constructor(scope: Construct, id: string, props: DirectoryServiceLogSubscriptionProps) {
     super(scope, id);
 
     const { directory, logGroup } = props;
@@ -65,10 +65,10 @@ export class DirectoryServiceLogSubscription extends cdk.Construct {
       ]),
     });
 
-    if (logGroup instanceof cdk.Construct) {
+    if (logGroup instanceof Construct) {
       awsCustomResource.node.addDependency(logGroup);
     }
-    if (directory instanceof cdk.Construct) {
+    if (directory instanceof Construct) {
       awsCustomResource.node.addDependency(directory);
     }
   }

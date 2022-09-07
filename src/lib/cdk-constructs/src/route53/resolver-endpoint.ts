@@ -31,12 +31,12 @@ export interface ResolverEndpointProps {
   subnetIds: string[];
 }
 
-export class ResolverEndpoint extends cdk.Construct {
+export class ResolverEndpoint extends Construct {
   private _inboundEndpoint: r53resolver.CfnResolverEndpoint | undefined;
   private _outboundEndpoint: r53resolver.CfnResolverEndpoint | undefined;
   // private _inboundEndpointIps: string[] = [];
 
-  constructor(parent: cdk.Construct, id: string, private readonly props: ResolverEndpointProps) {
+  constructor(parent: Construct, id: string, private readonly props: ResolverEndpointProps) {
     super(parent, id);
   }
 

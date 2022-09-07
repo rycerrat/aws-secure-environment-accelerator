@@ -27,10 +27,10 @@ export interface ImageFinderProps {
 /**
  * Custom resource that has an image ID attribute for the image with the given properties.
  */
-export class ImageFinder extends cdk.Construct {
+export class ImageFinder extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: ImageFinderProps) {
+  constructor(scope: Construct, id: string, props: ImageFinderProps) {
     super(scope, id);
 
     const lambdaPath = require.resolve('@aws-accelerator/custom-resource-ec2-image-finder-runtime');

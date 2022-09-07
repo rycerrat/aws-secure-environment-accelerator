@@ -22,10 +22,10 @@ export interface R53DnsEndpointIpsProps {
 /**
  * Custom resource implementation that retrive IPs for a created DNS Endpoint.
  */
-export class R53DnsEndpointIps extends cdk.Construct {
+export class R53DnsEndpointIps extends Construct {
   private readonly resource: custom.AwsCustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: R53DnsEndpointIpsProps) {
+  constructor(scope: Construct, id: string, props: R53DnsEndpointIpsProps) {
     super(scope, id);
     const { resolverEndpointId } = props;
 

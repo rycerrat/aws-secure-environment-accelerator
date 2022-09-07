@@ -19,6 +19,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as codebuild from 'aws-cdk-lib/aws-codebuild';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import * as s3assets from 'aws-cdk-lib/aws-s3-assets';
+import { Construct } from 'constructs';
 
 export type PackageManager = 'pnpm';
 
@@ -34,12 +35,12 @@ export interface CdkDeployProjectProps {
   environment?: { [key: string]: string };
 }
 
-export class CdkDeployProjectBase extends cdk.Construct {
+export class CdkDeployProjectBase extends Construct {
   readonly projectName: string;
   readonly projectTmpDir = tempy.directory();
   readonly environmentVariables: { [key: string]: codebuild.BuildEnvironmentVariable };
 
-  constructor(scope: cdk.Construct, id: string, props: CdkDeployProjectProps) {
+  constructor(scope: Construct, id: string, props: CdkDeployProjectProps) {
     super(scope, id);
 
     const { projectName, environment } = props;
@@ -82,7 +83,7 @@ export class CdkDeployProjectBase extends cdk.Construct {
 export class CdkDeployProject extends CdkDeployProjectBase {
   public readonly resource: codebuild.PipelineProject;
 
-  constructor(scope: cdk.Construct, id: string, props: CdkDeployProjectProps) {
+  constructor(scope: Construct, id: string, props: CdkDeployProjectProps) {
     super(scope, id, props);
 
     const { role, projectName, commands, computeType, timeout } = props;
@@ -131,7 +132,7 @@ export class CdkDeployProject extends CdkDeployProjectBase {
 export class PrebuiltCdkDeployProject extends CdkDeployProjectBase {
   public readonly resource: codebuild.PipelineProject;
 
-  constructor(scope: cdk.Construct, id: string, props: CdkDeployProjectProps) {
+  constructor(scope: Construct, id: string, props: CdkDeployProjectProps) {
     super(scope, id, props);
 
     const { role, projectName, commands, computeType, timeout } = props;

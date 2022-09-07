@@ -16,6 +16,7 @@ import * as iam from 'aws-cdk-lib/aws-iam';
 import * as kms from 'aws-cdk-lib/aws-kms';
 import * as secrets from 'aws-cdk-lib/aws-secretsmanager';
 import { createEncryptionKeyName } from './accelerator-name-generator';
+import { Construct } from 'constructs';
 
 export interface SecretsContainerProps extends Omit<secrets.SecretProps, 'encryptionKey'> {
   /**
@@ -41,12 +42,12 @@ export interface SecretsContainerProps extends Omit<secrets.SecretProps, 'encryp
  * Secrets can be created using the `createSecret` function. This function create a secret in this stack and grants
  * the given principals decrypt access on the KMS key and access to retrieve the secret value.
  */
-export class SecretsContainer extends cdk.Construct {
+export class SecretsContainer extends Construct {
   readonly encryptionKey: kms.Key;
   readonly keyAlias: string;
   readonly principals: iam.IPrincipal[] = [];
 
-  constructor(scope: cdk.Construct, name: string) {
+  constructor(scope: Construct, name: string) {
     super(scope, name);
 
     this.keyAlias = createEncryptionKeyName(`Secrets-Key`);

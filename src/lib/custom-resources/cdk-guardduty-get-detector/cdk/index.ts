@@ -25,10 +25,10 @@ export interface GuardDutyGetDetectorProps {
 /**
  * Custom resource implementation that retrieve IPs for a created DNS Endpoint.
  */
-export class GuardDutyDetector extends cdk.Construct {
+export class GuardDutyDetector extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: GuardDutyGetDetectorProps) {
+  constructor(scope: Construct, id: string, props: GuardDutyGetDetectorProps) {
     super(scope, id);
 
     const guardDutyDetector = this.lambdaFunction(props.roleArn);

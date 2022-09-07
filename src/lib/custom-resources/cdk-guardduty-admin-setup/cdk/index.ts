@@ -34,10 +34,10 @@ export interface GuardDutyAdminSetupProps {
  * Step 2 of https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html
  * Step 3 of https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html
  */
-export class GuardDutyAdminSetup extends cdk.Construct {
+export class GuardDutyAdminSetup extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: GuardDutyAdminSetupProps) {
+  constructor(scope: Construct, id: string, props: GuardDutyAdminSetupProps) {
     super(scope, id);
 
     const handlerProperties = {

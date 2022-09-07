@@ -12,7 +12,8 @@
  */
 
 import * as nfw from 'aws-cdk-lib/aws-networkfirewall';
-import { Construct, Fn } from 'aws-cdk-lib/core';
+import { Fn } from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 import { AzSubnet } from './vpc';
 import * as defaults from '../deployments/defaults';
 import * as logs from 'aws-cdk-lib/aws-logs';

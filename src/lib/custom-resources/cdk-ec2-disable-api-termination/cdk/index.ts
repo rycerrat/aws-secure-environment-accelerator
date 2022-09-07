@@ -23,11 +23,11 @@ export interface EC2DisableApiTerminationProps {
 /**
  * Custom resource implementation that Enables/Disables Deletion Protection on EC instances.
  */
-export class EC2DisableApiTermination extends cdk.Construct {
+export class EC2DisableApiTermination extends Construct {
   private readonly ec2Id: string;
   private readonly ec2Name: string;
 
-  constructor(scope: cdk.Construct, id: string, props: EC2DisableApiTerminationProps) {
+  constructor(scope: Construct, id: string, props: EC2DisableApiTerminationProps) {
     super(scope, id);
     this.ec2Id = props.ec2Id;
     this.ec2Name = props.ec2Name;

@@ -24,7 +24,7 @@ type Type<T> = new (...args: any[]) => T;
 
 const ACCEL_P_TAG = 'Accel-P';
 
-function addAccelProtectedTag<T extends cdk.Construct>(
+function addAccelProtectedTag<T extends Construct>(
   type: Type<T>,
   acceleratorName: string,
   tagPriority: number = 100,

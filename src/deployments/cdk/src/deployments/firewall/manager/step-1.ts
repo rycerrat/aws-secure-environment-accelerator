@@ -26,6 +26,7 @@ import { createName } from '@aws-accelerator/cdk-accelerator/src/core/accelerato
 import { addReplacementsToUserData } from '../cluster/step-4';
 import { Account } from '../../../utils/accounts';
 import { createIamInstanceProfileName } from '../../../common/iam-assets';
+import { Construct } from 'constructs';
 
 export interface FirewallManagerStep1Props {
   accountStacks: AccountStacks;
@@ -112,7 +113,7 @@ export async function step1(props: FirewallManagerStep1Props) {
  * Create firewall management instance for the given VPC and config in the given scope.
  */
 async function createFirewallManager(props: {
-  scope: cdk.Construct;
+  scope: Construct;
   vpc: Vpc;
   firewallManagerConfig: c.FirewallManagerConfig;
   keyPairName?: string;

@@ -21,10 +21,10 @@ export interface TransitGatewayAttachmentProps {
   transitGatewayId: string;
 }
 
-export class TransitGatewayAttachment extends cdk.Construct {
+export class TransitGatewayAttachment extends Construct {
   public readonly resource: ec2.CfnTransitGatewayAttachment;
 
-  constructor(parent: cdk.Construct, name: string, props: TransitGatewayAttachmentProps) {
+  constructor(parent: Construct, name: string, props: TransitGatewayAttachmentProps) {
     super(parent, name);
 
     this.resource = new ec2.CfnTransitGatewayAttachment(this, 'Resource', props);
@@ -44,8 +44,8 @@ export interface TransitGatewayRouteProps {
   cidr?: string;
 }
 
-export class TransitGatewayRoute extends cdk.Construct {
-  constructor(parent: cdk.Construct, name: string, props: TransitGatewayRouteProps) {
+export class TransitGatewayRoute extends Construct {
+  constructor(parent: Construct, name: string, props: TransitGatewayRouteProps) {
     super(parent, name);
 
     for (const [index, route] of props.tgwRouteAssociates?.entries() || []) {

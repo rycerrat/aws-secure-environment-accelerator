@@ -19,6 +19,7 @@ import { getAccountId, Account } from '../utils/accounts';
 import { VpcCommonProps, AzSubnets } from './vpc';
 import { AddTagsToResourcesOutput } from './add-tags-to-resources-output';
 import * as config from '@aws-accelerator/common-config/src';
+import { Construct } from 'constructs';
 
 export interface VpcSubnetSharingProps extends VpcCommonProps {
   subnets: AzSubnets;
@@ -73,8 +74,8 @@ export function getVpcSharedAccountKeys(
 /**
  * Auxiliary construct that takes care of VPC subnet sharing.
  */
-export class VpcSubnetSharing extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, props: VpcSubnetSharingProps) {
+export class VpcSubnetSharing extends Construct {
+  constructor(scope: Construct, id: string, props: VpcSubnetSharingProps) {
     super(scope, id);
 
     const stack = cdk.Stack.of(this);

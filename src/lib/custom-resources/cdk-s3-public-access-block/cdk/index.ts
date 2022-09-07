@@ -26,8 +26,8 @@ export interface S3PublicAccessBlockProps {
   accountId?: string;
 }
 
-export class S3PublicAccessBlock extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, props: S3PublicAccessBlockProps) {
+export class S3PublicAccessBlock extends Construct {
+  constructor(scope: Construct, id: string, props: S3PublicAccessBlockProps) {
     super(scope, id);
 
     const { accountId, blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets } = props;

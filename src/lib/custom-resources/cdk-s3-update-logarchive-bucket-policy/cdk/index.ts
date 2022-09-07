@@ -32,10 +32,10 @@ export interface LogArchiveReadAccessProps {
 /**
  * Adds IAM roles with {'ssm-log-archive-read-only-access': true} to the LogArchive bucket policy
  */
-export class S3UpdateLogArchivePolicy extends cdk.Construct {
+export class S3UpdateLogArchivePolicy extends Construct {
   private resource: cdk.CustomResource | undefined;
 
-  constructor(scope: cdk.Construct, id: string, private readonly props: LogArchiveReadAccessProps) {
+  constructor(scope: Construct, id: string, private readonly props: LogArchiveReadAccessProps) {
     super(scope, id);
 
     const { roles, logBucket, aesLogBucket, acceleratorPrefix } = props;

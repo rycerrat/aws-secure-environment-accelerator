@@ -29,10 +29,10 @@ export interface MacieEnableProps {
 /**
  * Custom resource implementation that enable Macie for AWS account.
  */
-export class MacieEnable extends cdk.Construct {
+export class MacieEnable extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: MacieEnableProps) {
+  constructor(scope: Construct, id: string, props: MacieEnableProps) {
     super(scope, id);
 
     const handlerProperties: HandlerProperties = props;

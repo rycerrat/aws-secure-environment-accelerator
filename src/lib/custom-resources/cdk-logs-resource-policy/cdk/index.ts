@@ -24,11 +24,11 @@ export interface LogResourcePolicyProps {
  * Custom resource implementation that create logs resource policy. Awaiting
  * https://github.com/aws-cloudformation/aws-cloudformation-coverage-roadmap/issues/249
  */
-export class LogResourcePolicy extends cdk.Construct {
+export class LogResourcePolicy extends Construct {
   private readonly policyName: string;
   private readonly policyDocument: iam.PolicyDocument;
 
-  constructor(scope: cdk.Construct, id: string, props: LogResourcePolicyProps) {
+  constructor(scope: Construct, id: string, props: LogResourcePolicyProps) {
     super(scope, id);
     this.policyName = props.policyName;
     this.policyDocument = new iam.PolicyDocument({

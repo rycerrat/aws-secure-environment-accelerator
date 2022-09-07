@@ -26,10 +26,10 @@ export interface SsmIncreaseThroughputProps {
  * Custom resource implementation that create logs resource policy. Awaiting
  * https://github.com/aws-cloudformation/aws-cloudformation-coverage-roadmap/issues/249
  */
-export class SsmIncreaseThroughput extends cdk.Construct {
+export class SsmIncreaseThroughput extends Construct {
   private role: iam.IRole;
   private readonly resource: cdk.CustomResource;
-  constructor(scope: cdk.Construct, id: string, props: SsmIncreaseThroughputProps) {
+  constructor(scope: Construct, id: string, props: SsmIncreaseThroughputProps) {
     super(scope, id);
     this.role = iam.Role.fromRoleArn(this, `${resourceType}Role`, props.roleArn);
     this.resource = new cdk.CustomResource(this, 'Resource', {

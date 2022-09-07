@@ -30,11 +30,11 @@ export interface ResourceCleanupProps {
 /**
  * Custom resource that will create Metric Filter on LogGroup.
  */
-export class ResourceCleanup extends cdk.Construct {
+export class ResourceCleanup extends Construct {
   private readonly resource: cdk.CustomResource;
   private role: iam.IRole;
 
-  constructor(scope: cdk.Construct, id: string, props: ResourceCleanupProps) {
+  constructor(scope: Construct, id: string, props: ResourceCleanupProps) {
     super(scope, id);
     this.role = iam.Role.fromRoleArn(this, `${resourceType}Role`, props.roleArn);
 

@@ -27,11 +27,11 @@ export interface TransitGatewayAcceptPeeringAttachmentProps {
 /**
  * Custom resource implementation that accepts transit gateway peering attachment
  */
-export class TransitGatewayAcceptPeeringAttachment extends cdk.Construct {
+export class TransitGatewayAcceptPeeringAttachment extends Construct {
   private readonly resource: cdk.CustomResource;
   private readonly role: iam.IRole;
 
-  constructor(scope: cdk.Construct, id: string, props: TransitGatewayAcceptPeeringAttachmentProps) {
+  constructor(scope: Construct, id: string, props: TransitGatewayAcceptPeeringAttachmentProps) {
     super(scope, id);
 
     this.role = iam.Role.fromRoleArn(scope, `${resourceType}Role`, props.roleArn);

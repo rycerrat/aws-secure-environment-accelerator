@@ -21,6 +21,7 @@ import { Subnet, SecurityGroup } from '../vpc';
 import { CfnSleep } from '@aws-accelerator/custom-resource-cfn-sleep';
 import { EC2DisableApiTermination } from '@aws-accelerator/custom-resource-ec2-disable-api-termination';
 import { EC2ModifyMetadataOptions } from '@aws-accelerator/custom-resource-ec2-modify-metadata-options';
+import { Construct } from 'constructs';
 
 export interface FirewallVpnTunnelOptions {
   cgwTunnelInsideAddress1: string;
@@ -68,12 +69,12 @@ export interface FirewallInstanceProps {
   userData?: string;
 }
 
-export class FirewallInstance extends cdk.Construct {
+export class FirewallInstance extends Construct {
   private readonly resource: ec2.CfnInstance;
   private readonly template?: S3Template;
   private readonly networkInterfacesProps: ec2.CfnInstance.NetworkInterfaceProperty[] = [];
   readonly instanceName: string;
-  constructor(scope: cdk.Construct, id: string, private readonly props: FirewallInstanceProps) {
+  constructor(scope: Construct, id: string, private readonly props: FirewallInstanceProps) {
     super(scope, id);
 
     const { configuration, blockDeviceMappings, userData } = props;

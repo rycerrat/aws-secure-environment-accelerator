@@ -34,11 +34,11 @@ export type LogsMetricFilterRuntimeProps = Omit<LogsMetricFilterProps, 'roleArn'
 /**
  * Custom resource that will create Metric Filter on LogGroup.
  */
-export class LogsMetricFilter extends cdk.Construct {
+export class LogsMetricFilter extends Construct {
   private readonly resource: cdk.CustomResource;
   private role: iam.IRole;
 
-  constructor(scope: cdk.Construct, id: string, props: LogsMetricFilterProps) {
+  constructor(scope: Construct, id: string, props: LogsMetricFilterProps) {
     super(scope, id);
     this.role = iam.Role.fromRoleArn(this, `${resourceType}Role`, props.roleArn);
 

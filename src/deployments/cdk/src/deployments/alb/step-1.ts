@@ -38,6 +38,7 @@ import { FirewallInstanceOutputFinder } from '../firewall/cluster/outputs';
 import { IamRoleOutputFinder } from '@aws-accelerator/common-outputs/src/iam-role';
 import { ModifyVpcEndpointServicePermissions } from '@aws-accelerator/custom-resource-modify-vpc-endpoint-service-permissions';
 import { getAccountId, Account } from '@aws-accelerator/common-outputs/src/accounts';
+import { Construct } from 'constructs';
 
 export interface ElbStep1Props {
   accountStacks: AccountStacks;
@@ -413,7 +414,7 @@ export function getTargetGroupArn(props: {
 /**
  * Creates or gets the existing ELB Lambda role.
  */
-export function createLambdaRole(scope: cdk.Construct) {
+export function createLambdaRole(scope: Construct) {
   const constructName = 'ElbLambdaAccessRole';
   const stack = cdk.Stack.of(scope);
   const child = stack.node.tryFindChild(constructName);
@@ -447,7 +448,7 @@ export function createLambdaRole(scope: cdk.Construct) {
 }
 
 export function getLambdaFunctionArn(
-  scope: cdk.Construct,
+  scope: Construct,
   fileName: string,
   role: iam.Role,
   albName: string,
@@ -469,7 +470,7 @@ export function getLambdaFunctionArn(
 }
 
 export function createTargetGroupForInstance(
-  scope: cdk.Construct,
+  scope: Construct,
   target: ElbTargetConfig,
   targetGroupName: string,
   vpcId: string,
@@ -495,7 +496,7 @@ export function createTargetGroupForInstance(
 }
 
 export function createTargetGroupForLambda(
-  scope: cdk.Construct,
+  scope: Construct,
   target: ElbTargetConfig,
   targetGroupName: string,
   lambdaFunctionArn: string,

@@ -23,6 +23,7 @@ import * as kms from 'aws-cdk-lib/aws-kms';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import { publicDecrypt } from 'crypto';
+import { Construct } from 'constructs';
 
 process.on('unhandledRejection', (reason, _) => {
   console.error(reason);
@@ -65,7 +66,7 @@ export namespace Installer {
   }
 }
 class Installer extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props: Installer.Props) {
+  constructor(scope: Construct, id: string, props: Installer.Props) {
     super(scope, id, props);
 
     const { repoSource, acceleratorVersion } = props;

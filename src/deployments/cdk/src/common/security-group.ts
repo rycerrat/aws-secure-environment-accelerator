@@ -79,13 +79,13 @@ export interface SecurityGroupProps {
   sharedAccountKey?: string;
 }
 
-export class SecurityGroup extends cdk.Construct {
+export class SecurityGroup extends Construct {
   readonly securityGroupNameMapping: NameToSecurityGroupMap = {};
   readonly securityGroups: constructs.SecurityGroup[] = [];
   readonly subnetPools: AssignedSubnetCidrPool[] = [];
   readonly vpcPools: AssignedVpcCidrPool[] = [];
 
-  constructor(parent: cdk.Construct, name: string, props: SecurityGroupProps) {
+  constructor(parent: Construct, name: string, props: SecurityGroupProps) {
     super(parent, name);
     const {
       securityGroups,

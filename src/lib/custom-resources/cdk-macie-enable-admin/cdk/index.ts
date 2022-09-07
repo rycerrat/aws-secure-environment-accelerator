@@ -24,10 +24,10 @@ export interface MacieEnableAdminProps {
   roleArn: string;
 }
 
-export class MacieEnableAdmin extends cdk.Construct {
+export class MacieEnableAdmin extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: MacieEnableAdminProps) {
+  constructor(scope: Construct, id: string, props: MacieEnableAdminProps) {
     super(scope, id);
     const handlerProperties: HandlerProperties = {
       accountId: props.accountId,

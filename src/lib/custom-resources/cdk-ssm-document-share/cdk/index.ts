@@ -27,10 +27,10 @@ export interface SSMDocumentShareProps {
 /**
  * Custom resource that will create SSM Document.
  */
-export class SSMDocumentShare extends cdk.Construct {
+export class SSMDocumentShare extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: SSMDocumentShareProps) {
+  constructor(scope: Construct, id: string, props: SSMDocumentShareProps) {
     super(scope, id);
     const { roleArn, name, accountIds } = props;
     const ssmDocumentShareLambda = this.lambdaFunction(roleArn);

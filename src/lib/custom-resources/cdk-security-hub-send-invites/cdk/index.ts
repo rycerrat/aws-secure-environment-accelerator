@@ -31,10 +31,10 @@ export interface SecurityHubSendInvitesProps {
 /**
  * Custom resource that has an image ID attribute for the image with the given properties.
  */
-export class SecurityHubSendInvites extends cdk.Construct {
+export class SecurityHubSendInvites extends Construct {
   private readonly resource: cdk.CustomResource;
 
-  constructor(scope: cdk.Construct, id: string, props: SecurityHubSendInvitesProps) {
+  constructor(scope: Construct, id: string, props: SecurityHubSendInvitesProps) {
     super(scope, id);
 
     const sendInvite = this.lambdaFunction(props.roleArn);

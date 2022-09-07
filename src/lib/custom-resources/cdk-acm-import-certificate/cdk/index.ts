@@ -39,12 +39,12 @@ export interface AcmImportCertificateProps {
 /**
  * Custom resource implementation that creates log subscription for directory service.
  */
-export class AcmImportCertificate extends cdk.Construct implements cdk.ITaggable {
+export class AcmImportCertificate extends Construct implements cdk.ITaggable {
   tags: cdk.TagManager = new cdk.TagManager(cdk.TagType.KEY_VALUE, 'AcmImportCertificate');
 
   private resource: cdk.CustomResource | undefined;
 
-  constructor(scope: cdk.Construct, id: string, private readonly props: AcmImportCertificateProps) {
+  constructor(scope: Construct, id: string, private readonly props: AcmImportCertificateProps) {
     super(scope, id);
 
     this.tags.setTag('Name', props.name);
