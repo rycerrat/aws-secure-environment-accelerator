@@ -15,7 +15,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import { Construct } from 'constructs';
 
-export interface IInstanceProfile extends cdk.IConstruct {
+export interface IInstanceProfile extends IConstruct {
   readonly instanceProfileName: string;
 }
 

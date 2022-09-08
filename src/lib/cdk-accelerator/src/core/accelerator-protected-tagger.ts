@@ -13,8 +13,9 @@
 
 import * as cdk from 'aws-cdk-lib';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
+import { IConstruct } from 'constructs';
 
-type Action = (value: cdk.IConstruct) => boolean;
+type Action = (value: IConstruct) => boolean;
 
 /**
  * Auxiliary interface to allow types as a method parameter.
@@ -29,7 +30,7 @@ function addAccelProtectedTag<T extends Construct>(
   acceleratorName: string,
   tagPriority: number = 100,
 ): Action {
-  return (value: cdk.IConstruct) => {
+  return (value: IConstruct) => {
     if (value instanceof type) {
       // Try to add the tags to the value (in case we have an L1 construct like ec2.CfnVPC)
       // Otherwise add it to the value's default child (in case we have an L2 construct like ec2.Vpc)
@@ -58,7 +59,7 @@ export class AcceleratorProtectedTagger implements cdk.IAspect {
     ];
   }
 
-  visit(node: cdk.IConstruct): void {
+  visit(node: Construct): void {
     for (const action of this.actions) {
       if (action(node)) {
         // Break to only apply the first action that matches
