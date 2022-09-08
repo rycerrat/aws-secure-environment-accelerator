@@ -15,7 +15,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as elb from 'aws-cdk-lib/aws-elasticloadbalancingv2';
 import * as kms from 'aws-cdk-lib/aws-kms';
-import { IConstruct } from 'construct'
+import { Construct, IConstruct } from 'constructs'
 
 type Action = (value: IConstruct) => boolean;
 
