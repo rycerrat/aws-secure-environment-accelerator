@@ -13,7 +13,7 @@
 
 import * as cdk from 'aws-cdk-lib';
 import { AcceleratorNameTagger, AcceleratorProtectedTagger } from '.';
-import { Construct } from 'constructs';
+import { Construct,IConstruct } from 'constructs';
 
 export interface AcceleratorStackProps extends cdk.StackProps {
   acceleratorName: string;
@@ -37,9 +37,9 @@ export class AcceleratorStack extends cdk.Stack {
     cdk.Aspects.of(this).add(new AcceleratorProtectedTagger(this.acceleratorName));
   }
 
-  static of(construct: cdk.IConstruct): AcceleratorStack {
+  static of(construct: IConstruct): AcceleratorStack {
     const parents = construct.node.scopes;
-    const stack = parents.find((p: cdk.IConstruct): p is AcceleratorStack => p instanceof AcceleratorStack);
+    const stack = parents.find((p: IConstruct): p is AcceleratorStack => p instanceof AcceleratorStack);
     if (!stack) {
       throw new Error(`The construct should only be used inside an AcceleratorStack`);
     }
