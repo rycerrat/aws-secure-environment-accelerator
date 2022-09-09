@@ -120,7 +120,7 @@ async function updateCidrs(params: {
     outputTableName,
     parametersTableName,
     subnetCidrPoolAssignedTable,
-    vpcCidrPoolAssignedTable,
+    vpcCidrPoolAssignedTable, 
   } = params;
   const assignedVpcCidrPools = await loadAssignedVpcCidrPool(vpcCidrPoolAssignedTable);
   const assignedSubnetCidrPools = await loadAssignedSubnetCidrPool(subnetCidrPoolAssignedTable);
