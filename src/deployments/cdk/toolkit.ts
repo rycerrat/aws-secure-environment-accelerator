@@ -14,7 +14,8 @@
 import path from 'path';
 import * as cdk from 'aws-cdk-lib';
 import * as cxschema from 'aws-cdk-lib/cloud-assembly-schema';
-import { CloudAssembly, CloudFormationStackArtifact, Environment } from 'aws-cdk-lib/cx-api';
+import { CloudAssembly } from 'aws-cdk/lib/api/cxapp/cloud-assembly';
+import { CloudFormationStackArtifact } from 'aws-cdk-lib/cx-api';
 import { ToolkitInfo } from 'aws-cdk/lib/api/toolkit-info';
 import { Mode } from 'aws-cdk/lib/api';
 import { setLogLevel } from 'aws-cdk/lib/logging';
@@ -108,7 +109,7 @@ export class CdkToolkit {
     await fulfillAll(promises);
   }
 
-  async bootstrapEnvironment(environment: Environment) {
+  async bootstrapEnvironment(environment: cdk.Environment) {
     console.log(`Bootstrapping environment in account ${environment.account} and region ${environment.region}`);
 
     const trustedAccounts: string[] = [];
@@ -178,7 +179,7 @@ export class CdkToolkit {
     // Merge all stack outputs
     return combinedOutputs;
   }
-  deploymentLog(stack: CloudFormationStackArtifact, message: string, messageType: string = 'INFO') {
+  deploymentLog(stack: cx_api.CloudFormationStackArtifact, message: string, messageType: string = 'INFO') {
     const stackLoggingInfo = {
       stackName: stack.displayName,
       stackEnvironment: stack.environment,
