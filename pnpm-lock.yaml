@@ -178,6 +178,7 @@ importers:
       microstats: ^0.1.2
       mri: 1.1.6
       pascal-case: 3.1.2
+      promptly: 3.2.0
       semver: 7.3.5
       tempy: 1.0.1
       ts-jest: 25.3.0
@@ -251,6 +252,7 @@ importers:
       js-yaml: 4.1.0
       microstats: 0.1.2
       pascal-case: 3.1.2
+      promptly: 3.2.0
       semver: 7.3.5
       tempy: 1.0.1
     devDependencies:
@@ -3043,6 +3045,9 @@ packages:
   /@aws-cdk/cloud-assembly-schema/2.28.0:
     resolution: {integrity: sha512-yIx67kHTXs3iIsNqCV9dYvcpSHeq4+mVNlKl/ogabns+/P/hO6oJcWZ+1DNt1FNRkH7ScgW+WuQ9NvBXhK0XTg==}
     engines: {node: '>= 14.15.0'}
+    dependencies:
+      jsonschema: 1.4.1
+      semver: 7.3.7
     dev: false
     bundledDependencies:
       - jsonschema
@@ -3053,6 +3058,7 @@ packages:
     engines: {node: '>= 14.15.0'}
     dependencies:
       '@aws-cdk/cloud-assembly-schema': 2.28.0
+      semver: 7.3.7
     dev: false
     bundledDependencies:
       - semver
@@ -16344,6 +16350,10 @@ packages:
     resolution: {integrity: sha512-0ZIR9PasPxGXmRsEF8jsDzndzHDj7tIav+JUmvIFB/WHswliFnquxECT/De7GR4yg99ky/NlRKJT82G1y271bw==}
     dev: true
 
+  /mute-stream/0.0.8:
+    resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
+    dev: false
+
   /mz/2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
     dependencies:
@@ -17854,6 +17864,12 @@ packages:
       asap: 2.0.6
     dev: true
 
+  /promptly/3.2.0:
+    resolution: {integrity: sha512-WnR9obtgW+rG4oUV3hSnNGl1pHm3V1H/qD9iJBumGSmVsSC5HpZOLuu8qdMb6yCItGfT7dcRszejr/5P3i9Pug==}
+    dependencies:
+      read: 1.0.7
+    dev: false
+
   /prompts/2.4.0:
     resolution: {integrity: sha512-awZAKrk3vN6CroQukBL+R9051a4R3zCZBlJm/HBfrSZ8iTpYix3VX1vU4mveiLpiwmOJT4wokTF9m6HUk4KqWQ==}
     engines: {node: '>= 6'}
@@ -18315,6 +18331,13 @@ packages:
       parse-json: 5.2.0
       type-fest: 0.6.0
     dev: true
+
+  /read/1.0.7:
+    resolution: {integrity: sha512-rSOKNYUmaxy0om1BNjMN4ezNT6VKK+2xF4GBhc81mkH7L60i6dp8qPYrkndNLT3QPphoII3maL9PVC9XmhHwVQ==}
+    engines: {node: '>=0.8'}
+    dependencies:
+      mute-stream: 0.0.8
+    dev: false
 
   /readable-stream/2.3.7:
     resolution: {integrity: sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw==}
