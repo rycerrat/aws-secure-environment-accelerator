@@ -160,6 +160,7 @@ importers:
       '@aws-accelerator/custom-resource-vpc-default-security-group': workspace:*
       '@aws-accelerator/deployments': 'link:'
       '@aws-accelerator/deployments-runtime': workspace:*
+      '@aws-cdk/cx-api': 2.28.0
       '@types/jest': 25.2.3
       '@types/js-yaml': 4.0.1
       '@types/mri': 1.1.0
@@ -239,6 +240,7 @@ importers:
       '@aws-accelerator/custom-resource-ssm-session-manager-document': link:../../lib/custom-resources/cdk-ssm-session-manager-document
       '@aws-accelerator/custom-resource-vpc-default-security-group': link:../../lib/custom-resources/cdk-vpc-default-security-group
       '@aws-accelerator/deployments': 'link:'
+      '@aws-cdk/cx-api': 2.28.0
       '@types/js-yaml': 4.0.1
       '@types/semver': 7.3.5
       aws-cdk-lib: 2.28.0_constructs@10.0.12
@@ -3037,6 +3039,23 @@ packages:
       call-me-maybe: 1.0.1
       js-yaml: 4.1.0
     dev: true
+
+  /@aws-cdk/cloud-assembly-schema/2.28.0:
+    resolution: {integrity: sha512-yIx67kHTXs3iIsNqCV9dYvcpSHeq4+mVNlKl/ogabns+/P/hO6oJcWZ+1DNt1FNRkH7ScgW+WuQ9NvBXhK0XTg==}
+    engines: {node: '>= 14.15.0'}
+    dev: false
+    bundledDependencies:
+      - jsonschema
+      - semver
+
+  /@aws-cdk/cx-api/2.28.0:
+    resolution: {integrity: sha512-IDbPsZea9NUsT0gapeup/qL3FATzzJw62PylIGyu4d1LoAMO/M+KYStLmn+FZYXRy501LnVVOkV8Qg9G1qvarA==}
+    engines: {node: '>= 14.15.0'}
+    dependencies:
+      '@aws-cdk/cloud-assembly-schema': 2.28.0
+    dev: false
+    bundledDependencies:
+      - semver
 
   /@aws-crypto/crc32/1.0.0:
     resolution: {integrity: sha512-wr4EyCv3ZfLH3Sg7FErV6e/cLhpk9rUP/l5322y8PRgpQsItdieaLbtE4aDOR+dxl8U7BG9FIwWXH4TleTDZ9A==}
@@ -11210,6 +11229,7 @@ packages:
     resolution: {integrity: sha512-wVQcQgwwK7b//7yI54/3hundmXAw7RBpuy5f6yIBFNceJr8feTK6Cs2I2f3+gp3/ikszzTouLup9AzxioEEXPQ==}
     engines: {node: '>= 12.7.0'}
     dev: false
+    bundledDependencies: []
 
   /contains-path/0.1.0:
     resolution: {integrity: sha1-/ozxhP9mcLa67wGp1IYaXL7EEgo=}
