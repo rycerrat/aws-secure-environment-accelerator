@@ -85,7 +85,8 @@
     "semver": "7.3.5",
     "tempy": "1.0.1",
     "@aws-cdk/cx-api": "2.28.0",
-    "promptly": "3.2.0"
+    "promptly": "3.2.0",
+    "cdk-assets": "2.28.0"
   },
   "devDependencies": {
     "@aws-accelerator/cdk-plugin-assume-role": "workspace:*",
