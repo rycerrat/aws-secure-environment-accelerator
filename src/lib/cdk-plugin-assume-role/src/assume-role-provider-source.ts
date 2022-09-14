@@ -13,7 +13,7 @@
 
 import * as aws from 'aws-sdk';
 aws.config.logger = console;
-import { CredentialProviderSource, Mode } from 'aws-cdk/lib/api/aws-auth/credentials';
+import { CredentialProviderSource, Mode } from 'aws-cdk/lib/api/plugin/credential-provider-source';
 import { green } from 'colors/safe';
 import { throttlingBackOff } from './backoff';
 
