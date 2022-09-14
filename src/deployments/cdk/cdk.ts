@@ -90,7 +90,8 @@ async function main() {
   }
 
   const apps = await app.deploy({
-    phaseId: `${phase}`,
+    // phaseId: `${phase}`,
+    phaseId: '-1',
     region: args.region,
     accountKey: args['account-key'],
     useTempOutputDir: true,
