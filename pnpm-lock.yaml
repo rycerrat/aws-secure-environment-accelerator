@@ -36,9 +36,9 @@ importers:
       '@aws-accelerator/accelerator-runtime': workspace:*
       '@aws-accelerator/cdk-accelerator': workspace:*
       '@types/node': 14.14.31
-      aws-cdk: 2.28.0
-      aws-cdk-lib: 2.28.0
-      cdk-assets: 2.28.0
+      aws-cdk: 2.38.0
+      aws-cdk-lib: 2.38.0
+      cdk-assets: 2.38.0
       constructs: 10.0.12
       eslint: 7.25.0
       jest: 25.2.4
@@ -49,9 +49,9 @@ importers:
       '@aws-accelerator/accelerator': 'link:'
       '@aws-accelerator/accelerator-runtime': link:../runtime
       '@aws-accelerator/cdk-accelerator': link:../../lib/cdk-accelerator
-      aws-cdk: 2.28.0
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
-      cdk-assets: 2.28.0
+      aws-cdk: 2.38.0
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
+      cdk-assets: 2.38.0
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -162,17 +162,17 @@ importers:
       '@aws-accelerator/custom-resource-vpc-default-security-group': workspace:*
       '@aws-accelerator/deployments': 'link:'
       '@aws-accelerator/deployments-runtime': workspace:*
-      '@aws-cdk/cloudformation-diff': 2.28.0
+      '@aws-cdk/cloudformation-diff': 2.38.0
       '@aws-cdk/core': 1.172.0
-      '@aws-cdk/cx-api': 2.28.0
+      '@aws-cdk/cx-api': 2.38.0
       '@types/jest': 25.2.3
       '@types/js-yaml': 4.0.1
       '@types/mri': 1.1.0
       '@types/node': 14.14.31
       '@types/semver': 7.3.5
-      aws-cdk: 2.28.0
-      aws-cdk-lib: 2.28.0
-      cdk-assets: 2.28.0
+      aws-cdk: 2.38.0
+      aws-cdk-lib: 2.38.0
+      cdk-assets: 2.38.0
       constructs: 10.0.12
       eslint: 7.25.0
       hash-sum: 2.0.0
@@ -247,13 +247,13 @@ importers:
       '@aws-accelerator/custom-resource-ssm-session-manager-document': link:../../lib/custom-resources/cdk-ssm-session-manager-document
       '@aws-accelerator/custom-resource-vpc-default-security-group': link:../../lib/custom-resources/cdk-vpc-default-security-group
       '@aws-accelerator/deployments': 'link:'
-      '@aws-cdk/cloudformation-diff': 2.28.0
+      '@aws-cdk/cloudformation-diff': 2.38.0
       '@aws-cdk/core': 1.172.0
-      '@aws-cdk/cx-api': 2.28.0
+      '@aws-cdk/cx-api': 2.38.0
       '@types/js-yaml': 4.0.1
       '@types/semver': 7.3.5
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
-      cdk-assets: 2.28.0
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
+      cdk-assets: 2.38.0
       constructs: 10.0.12
       hash-sum: 2.0.0
       io-ts: 2.2.16
@@ -271,7 +271,7 @@ importers:
       '@types/jest': 25.2.3
       '@types/mri': 1.1.0
       '@types/node': 14.14.31
-      aws-cdk: 2.28.0
+      aws-cdk: 2.38.0
       eslint: 7.25.0
       jest: 25.2.4
       mri: 1.1.6
@@ -325,8 +325,8 @@ importers:
       '@aws-accelerator/installer': 'link:'
       '@types/jest': 25.2.3
       '@types/node': 14.14.31
-      aws-cdk: 2.28.0
-      aws-cdk-lib: 2.28.0
+      aws-cdk: 2.38.0
+      aws-cdk-lib: 2.38.0
       aws-sdk: 2.944.0
       constructs: 10.0.12
       eslint: 7.25.0
@@ -336,12 +336,12 @@ importers:
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/installer': 'link:'
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/jest': 25.2.3
       '@types/node': 14.14.31
-      aws-cdk: 2.28.0
+      aws-cdk: 2.38.0
       aws-sdk: 2.944.0
       eslint: 7.25.0
       jest: 25.2.4
@@ -356,7 +356,7 @@ importers:
       '@types/glob': 7.1.3
       '@types/jest': 25.2.3
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       eslint: 7.25.0
       glob: 7.1.6
@@ -368,7 +368,7 @@ importers:
     dependencies:
       '@aws-accelerator/cdk-accelerator': 'link:'
       '@aws-accelerator/custom-resource-ec2-keypair': link:../custom-resources/cdk-ec2-keypair
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
       glob: 7.1.6
       tempy: 1.0.1
@@ -397,7 +397,7 @@ importers:
       '@aws-accelerator/custom-resource-security-hub-send-invites': workspace:*
       '@types/hash-sum': 1.0.0
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       aws-sdk: 2.944.0
       constructs: 10.0.12
       eslint: 7.25.0
@@ -419,7 +419,7 @@ importers:
       '@aws-accelerator/custom-resource-security-hub-accept-invites': link:../custom-resources/cdk-security-hub-accept-invites
       '@aws-accelerator/custom-resource-security-hub-enable': link:../custom-resources/cdk-security-hub-enable
       '@aws-accelerator/custom-resource-security-hub-send-invites': link:../custom-resources/cdk-security-hub-send-invites
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       aws-sdk: 2.944.0
       constructs: 10.0.12
       hash-sum: 2.0.0
@@ -437,7 +437,7 @@ importers:
     specifiers:
       '@aws-accelerator/cdk-plugin-assume-role': 'link:'
       '@types/node': 14.14.31
-      aws-cdk: 2.28.0
+      aws-cdk: 2.38.0
       aws-sdk: 2.944.0
       colors: 1.4.0
       esbuild: 0.11.18
@@ -445,7 +445,7 @@ importers:
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/cdk-plugin-assume-role': 'link:'
-      aws-cdk: 2.28.0
+      aws-cdk: 2.38.0
       aws-sdk: 2.944.0
       colors: 1.4.0
       exponential-backoff: 3.1.0
@@ -611,7 +611,7 @@ importers:
       '@aws-accelerator/custom-resource-acm-import-certificate': 'link:'
       '@aws-accelerator/custom-resource-acm-import-certificate-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       esbuild: 0.11.18
       ts-node: 9.1.1
@@ -619,7 +619,7 @@ importers:
     dependencies:
       '@aws-accelerator/custom-resource-acm-import-certificate': 'link:'
       '@aws-accelerator/custom-resource-acm-import-certificate-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -655,12 +655,12 @@ importers:
       '@aws-accelerator/custom-resource-associate-hosted-zones': 'link:'
       '@aws-accelerator/custom-resource-associate-hosted-zones-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-associate-hosted-zones': 'link:'
       '@aws-accelerator/custom-resource-associate-hosted-zones-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -693,12 +693,12 @@ importers:
       '@aws-accelerator/custom-resource-associate-resolver-rules': 'link:'
       '@aws-accelerator/custom-resource-associate-resolver-rules-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-associate-resolver-rules': 'link:'
       '@aws-accelerator/custom-resource-associate-resolver-rules-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -731,14 +731,14 @@ importers:
       '@aws-accelerator/custom-resource-cfn-sleep': 'link:'
       '@aws-accelerator/custom-resource-cfn-sleep-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-cfn-sleep': 'link:'
       '@aws-accelerator/custom-resource-cfn-sleep-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -780,14 +780,14 @@ importers:
       '@aws-accelerator/custom-resource-cloud-trail': 'link:'
       '@aws-accelerator/custom-resource-cloud-trail-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-cloud-trail': 'link:'
       '@aws-accelerator/custom-resource-cloud-trail-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -820,12 +820,12 @@ importers:
       '@aws-accelerator/custom-resource-create-hosted-zone': 'link:'
       '@aws-accelerator/custom-resource-create-hosted-zone-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-create-hosted-zone': 'link:'
       '@aws-accelerator/custom-resource-create-hosted-zone-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -858,12 +858,12 @@ importers:
       '@aws-accelerator/custom-resource-create-resolver-rule': 'link:'
       '@aws-accelerator/custom-resource-create-resolver-rule-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-create-resolver-rule': 'link:'
       '@aws-accelerator/custom-resource-create-resolver-rule-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -896,14 +896,14 @@ importers:
       '@aws-accelerator/custom-resource-cur-report-definition': 'link:'
       '@aws-accelerator/custom-resource-cur-report-definition-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-cur-report-definition': 'link:'
       '@aws-accelerator/custom-resource-cur-report-definition-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -936,12 +936,12 @@ importers:
       '@aws-accelerator/custom-resource-disassociate-hosted-zones': 'link:'
       '@aws-accelerator/custom-resource-disassociate-hosted-zones-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-disassociate-hosted-zones': 'link:'
       '@aws-accelerator/custom-resource-disassociate-hosted-zones-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -973,13 +973,13 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-ds-log-subscription': 'link:'
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-ds-log-subscription': 'link:'
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -991,12 +991,12 @@ importers:
       '@aws-accelerator/custom-resource-accept-vpc-endpoint-connection': 'link:'
       '@aws-accelerator/custom-resource-accept-vpc-endpoint-connection-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-accept-vpc-endpoint-connection': 'link:'
       '@aws-accelerator/custom-resource-accept-vpc-endpoint-connection-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1028,14 +1028,14 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-ec2-disable-api-termination': 'link:'
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       eslint: 7.25.0
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-ec2-disable-api-termination': 'link:'
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1048,14 +1048,14 @@ importers:
       '@aws-accelerator/custom-resource-ec2-ebs-default-encryption': 'link:'
       '@aws-accelerator/custom-resource-ec2-ebs-default-encryption-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-ec2-ebs-default-encryption': 'link:'
       '@aws-accelerator/custom-resource-ec2-ebs-default-encryption-runtime': link:../ec2-ebs-default-encryption/lambda
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1088,14 +1088,14 @@ importers:
       '@aws-accelerator/custom-resource-ec2-image-finder': 'link:'
       '@aws-accelerator/custom-resource-ec2-image-finder-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-ec2-image-finder': 'link:'
       '@aws-accelerator/custom-resource-ec2-image-finder-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1126,14 +1126,14 @@ importers:
       '@aws-accelerator/custom-resource-ec2-keypair': 'link:'
       '@aws-accelerator/custom-resource-ec2-keypair-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-ec2-keypair': 'link:'
       '@aws-accelerator/custom-resource-ec2-keypair-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1166,14 +1166,14 @@ importers:
       '@aws-accelerator/custom-resource-ec2-launch-time': 'link:'
       '@aws-accelerator/custom-resource-ec2-launch-time-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-ec2-launch-time': 'link:'
       '@aws-accelerator/custom-resource-ec2-launch-time-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1204,7 +1204,7 @@ importers:
       '@aws-accelerator/custom-resource-ec2-marketplace-subscription-validation': 'link:'
       '@aws-accelerator/custom-resource-ec2-marketplace-subscription-validation-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       jest: 25.2.4
       ts-jest: 25.3.0
@@ -1213,7 +1213,7 @@ importers:
     dependencies:
       '@aws-accelerator/custom-resource-ec2-marketplace-subscription-validation': 'link:'
       '@aws-accelerator/custom-resource-ec2-marketplace-subscription-validation-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1251,14 +1251,14 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-ec2-modify-metadata-options': 'link:'
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       eslint: 7.25.0
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-ec2-modify-metadata-options': 'link:'
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1271,12 +1271,12 @@ importers:
       '@aws-accelerator/custom-resource-ec2-modify-transit-gateway-vpc-attachment': 'link:'
       '@aws-accelerator/custom-resource-ec2-modify-transit-gateway-vpc-attachment-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-ec2-modify-transit-gateway-vpc-attachment': 'link:'
       '@aws-accelerator/custom-resource-ec2-modify-transit-gateway-vpc-attachment-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1309,12 +1309,12 @@ importers:
       '@aws-accelerator/custom-resource-modify-vpc-endpoint-service-permissions': 'link:'
       '@aws-accelerator/custom-resource-modify-vpc-endpoint-service-permissions-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-modify-vpc-endpoint-service-permissions': 'link:'
       '@aws-accelerator/custom-resource-modify-vpc-endpoint-service-permissions-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1346,7 +1346,7 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-ec2-vpn-attachment': 'link:'
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       jest: 25.2.4
       ts-jest: 25.3.0
@@ -1354,7 +1354,7 @@ importers:
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-ec2-vpn-attachment': 'link:'
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1368,14 +1368,14 @@ importers:
       '@aws-accelerator/custom-resource-ec2-vpn-tunnel-options': 'link:'
       '@aws-accelerator/custom-resource-ec2-vpn-tunnel-options-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-ec2-vpn-tunnel-options': 'link:'
       '@aws-accelerator/custom-resource-ec2-vpn-tunnel-options-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1409,14 +1409,14 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-elb-deletion-protection': 'link:'
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       eslint: 7.25.0
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-elb-deletion-protection': 'link:'
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1428,13 +1428,13 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-fms-notification-channel-runtime': workspace:^0.0.1
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-fms-notification-channel-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1468,7 +1468,7 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-guardduty-admin-setup-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       jest: 25.2.4
       ts-jest: 25.3.0
@@ -1476,7 +1476,7 @@ importers:
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-guardduty-admin-setup-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1510,7 +1510,7 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-guardduty-create-publish-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       jest: 25.2.4
       ts-jest: 25.3.0
@@ -1518,7 +1518,7 @@ importers:
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-guardduty-create-publish-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1552,7 +1552,7 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-guardduty-enable-admin-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       jest: 25.2.4
       ts-jest: 25.3.0
@@ -1560,7 +1560,7 @@ importers:
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-guardduty-enable-admin-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1594,7 +1594,7 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-guardduty-get-detector-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       jest: 25.2.4
       ts-jest: 25.3.0
@@ -1602,7 +1602,7 @@ importers:
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-guardduty-get-detector-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1636,13 +1636,13 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-iam-create-role-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-iam-create-role-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1674,13 +1674,13 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-iam-password-policy-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-iam-password-policy-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1710,13 +1710,13 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-kms-grant-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-kms-grant-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1748,13 +1748,13 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-logs-log-group-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-logs-log-group-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1786,11 +1786,11 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-logs-metric-filter-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-logs-metric-filter-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1821,12 +1821,12 @@ importers:
   src/lib/custom-resources/cdk-logs-resource-policy:
     specifiers:
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1837,7 +1837,7 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-macie-create-member-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       jest: 25.2.4
       ts-jest: 25.3.0
@@ -1845,7 +1845,7 @@ importers:
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-macie-create-member-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1879,7 +1879,7 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-macie-enable-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       jest: 25.2.4
       ts-jest: 25.3.0
@@ -1887,7 +1887,7 @@ importers:
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-macie-enable-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1900,7 +1900,7 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-macie-enable-admin-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       jest: 25.2.4
       ts-jest: 25.3.0
@@ -1908,7 +1908,7 @@ importers:
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-macie-enable-admin-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -1963,7 +1963,7 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-macie-export-config-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       jest: 25.2.4
       ts-jest: 25.3.0
@@ -1971,7 +1971,7 @@ importers:
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-macie-export-config-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2005,14 +2005,14 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-macie-update-config-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       jest: 25.2.4
       ts-jest: 25.3.0
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@aws-accelerator/custom-resource-macie-update-config-runtime': link:runtime
@@ -2048,7 +2048,7 @@ importers:
       '@aws-accelerator/custom-resource-macie-enable-runtime': workspace:*
       '@aws-accelerator/custom-resource-macie-update-session-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       jest: 25.2.4
       ts-jest: 25.3.0
@@ -2057,7 +2057,7 @@ importers:
     dependencies:
       '@aws-accelerator/custom-resource-macie-enable-runtime': link:../cdk-macie-enable/runtime
       '@aws-accelerator/custom-resource-macie-update-session-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2092,14 +2092,14 @@ importers:
   src/lib/custom-resources/cdk-organization:
     specifiers:
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       jest: 25.2.4
       ts-jest: 25.3.0
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2111,10 +2111,10 @@ importers:
   src/lib/custom-resources/cdk-r53-dns-endpoint-ips:
     specifiers:
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2123,11 +2123,11 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-cleanup-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-cleanup-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2159,13 +2159,13 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-s3-copy-files-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-s3-copy-files-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2196,11 +2196,11 @@ importers:
   src/lib/custom-resources/cdk-s3-public-access-block:
     specifiers:
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       typescript: 4.2.4
     dependencies:
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2210,11 +2210,11 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-s3-put-bucket-replication-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-s3-put-bucket-replication-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2246,11 +2246,11 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-s3-put-bucket-versioning-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-s3-put-bucket-versioning-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2282,13 +2282,13 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-s3-template-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-s3-template-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2320,13 +2320,13 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-s3-update-logarchive-policy-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-s3-update-logarchive-policy-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2356,11 +2356,11 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-security-hub-accept-invites-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-security-hub-accept-invites-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2390,11 +2390,11 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-security-hub-disable-controls-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-security-hub-disable-controls-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2426,11 +2426,11 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-security-hub-enable-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-security-hub-enable-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2462,11 +2462,11 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-security-hub-send-invites-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-security-hub-send-invites-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2496,10 +2496,10 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-ssm-create-document-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@aws-accelerator/custom-resource-ssm-create-document-runtime': link:runtime
@@ -2532,11 +2532,11 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-ssm-document-share-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-ssm-document-share-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2568,11 +2568,11 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-ssm-increase-throughput-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-ssm-increase-throughput-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2604,11 +2604,11 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-ssm-session-manager-document-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
     dependencies:
       '@aws-accelerator/custom-resource-ssm-session-manager-document-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2640,13 +2640,13 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-accept-tgw-peering-attachment-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-accept-tgw-peering-attachment-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2678,13 +2678,13 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-create-tgw-peering-attachment-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-create-tgw-peering-attachment-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2716,13 +2716,13 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-vpc-default-security-group-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-vpc-default-security-group-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2752,13 +2752,13 @@ importers:
     specifiers:
       '@aws-accelerator/custom-resource-ec2-ebs-default-encryption-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       ts-node: 9.1.1
       typescript: 4.2.4
     dependencies:
       '@aws-accelerator/custom-resource-ec2-ebs-default-encryption-runtime': link:lambda
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -2791,7 +2791,7 @@ importers:
       '@aws-accelerator/custom-resource-logs-add-subscription-filter-cloudwatch-event-runtime': workspace:*
       '@aws-accelerator/custom-resource-logs-add-subscription-filter-runtime': workspace:*
       '@types/node': 14.14.31
-      aws-cdk-lib: 2.28.0
+      aws-cdk-lib: 2.38.0
       constructs: 10.0.12
       jest: 25.2.4
       ts-jest: 25.3.0
@@ -2800,7 +2800,7 @@ importers:
     dependencies:
       '@aws-accelerator/custom-resource-logs-add-subscription-filter-cloudwatch-event-runtime': link:runtime-event-trigger
       '@aws-accelerator/custom-resource-logs-add-subscription-filter-runtime': link:runtime
-      aws-cdk-lib: 2.28.0_constructs@10.0.12
+      aws-cdk-lib: 2.38.0_constructs@10.0.12
       constructs: 10.0.12
     devDependencies:
       '@types/node': 14.14.31
@@ -3060,8 +3060,8 @@ packages:
       js-yaml: 4.1.0
     dev: true
 
-  /@aws-cdk/cfnspec/2.28.0:
-    resolution: {integrity: sha512-RBUV9huAmtKIzV2Y8tHsE2hYIUefGEQ39qh85UUwSnA2Z1VTSZenwYkrqzRLYfuE3O1ud1nMSup4HNMqmzEjCg==}
+  /@aws-cdk/cfnspec/2.38.0:
+    resolution: {integrity: sha512-MChhYb1i0H3AaEXswFpAc93EbYERLINgDV6CfAg0LS6xhZco9VM8T6apgFpjMDvx2K2L2+TqdHxe+1oZpz6Mig==}
     dependencies:
       fs-extra: 9.1.0
       md5: 2.3.0
@@ -3078,23 +3078,20 @@ packages:
       - jsonschema
       - semver
 
-  /@aws-cdk/cloud-assembly-schema/2.28.0:
-    resolution: {integrity: sha512-yIx67kHTXs3iIsNqCV9dYvcpSHeq4+mVNlKl/ogabns+/P/hO6oJcWZ+1DNt1FNRkH7ScgW+WuQ9NvBXhK0XTg==}
+  /@aws-cdk/cloud-assembly-schema/2.38.0:
+    resolution: {integrity: sha512-znyniEa2EbkPmAD2o1SvoXkIC0YZSnIwqDla80BNn89Xi1xonyPWFIVhRRKD260kYiWcENwehvyVjqWaeLGv5g==}
     engines: {node: '>= 14.15.0'}
-    dependencies:
-      jsonschema: 1.4.1
-      semver: 7.3.7
     dev: false
     bundledDependencies:
       - jsonschema
       - semver
 
-  /@aws-cdk/cloudformation-diff/2.28.0:
-    resolution: {integrity: sha512-BYQqqDTFH9+CMJAjyMcnsiB8dAWBy7g/bDmUZQbx02lyr1g55bew6IkYyP9vl6+wqexeE7xaTSkOp/U1Di3LTw==}
+  /@aws-cdk/cloudformation-diff/2.38.0:
+    resolution: {integrity: sha512-G9AADmodo39F6g/2cc/z/wrJi4I4agNPhr00+SjCa7+H7PKXfuyOuUs/TdPjZ++hHk26Lcwp+b+Hn3SaNJGtYg==}
     engines: {node: '>= 14.15.0'}
     dependencies:
-      '@aws-cdk/cfnspec': 2.28.0
-      '@types/node': 10.17.60
+      '@aws-cdk/cfnspec': 2.38.0
+      '@types/node': 14.18.29
       chalk: 4.1.2
       diff: 5.1.0
       fast-deep-equal: 3.1.3
@@ -3131,12 +3128,11 @@ packages:
     bundledDependencies:
       - semver
 
-  /@aws-cdk/cx-api/2.28.0:
-    resolution: {integrity: sha512-IDbPsZea9NUsT0gapeup/qL3FATzzJw62PylIGyu4d1LoAMO/M+KYStLmn+FZYXRy501LnVVOkV8Qg9G1qvarA==}
+  /@aws-cdk/cx-api/2.38.0:
+    resolution: {integrity: sha512-03MRRi0a9hsDVNoAl8FE0RrJtXPK/Kx2mumoWnLc+KTTHz0Iq4KXzLbBzwXFNuj0twuBLNQiEnWGWU+XG4cS8Q==}
     engines: {node: '>= 14.15.0'}
     dependencies:
-      '@aws-cdk/cloud-assembly-schema': 2.28.0
-      semver: 7.3.7
+      '@aws-cdk/cloud-assembly-schema': 2.38.0
     dev: false
     bundledDependencies:
       - semver
@@ -9270,10 +9266,6 @@ packages:
     resolution: {integrity: sha512-fMl88ZoZXOB7VKazJ6wUMpZc9QIn+jcigSFRf2K/rrw4DcXn+/uGxlWX8DDlcE7JkwgIZ7BDH+JgxZPlc/Ap3g==}
     dev: true
 
-  /@types/node/10.17.60:
-    resolution: {integrity: sha512-F0KIgDJfy2nA3zMLmWGKxcH2ZVEtCZXHHdOQs2gSaQ27+lNeEfGxzkIw90aXswATX7AZ33tahPbzy6KAfUreVw==}
-    dev: false
-
   /@types/node/12.12.6:
     resolution: {integrity: sha512-FjsYUPzEJdGXjwKqSpE0/9QEh6kzhTAeObA54rn6j3rR4C/mzpI9L0KNfoeASSPMMdxIsoJuCLDWcM/rVjIsSA==}
     dev: true
@@ -9289,6 +9281,10 @@ packages:
   /@types/node/14.17.9:
     resolution: {integrity: sha512-CMjgRNsks27IDwI785YMY0KLt3co/c0cQ5foxHYv/shC2w8oOnVwz5Ubq1QG5KzrcW+AXk6gzdnxIkDnTvzu3g==}
     dev: true
+
+  /@types/node/14.18.29:
+    resolution: {integrity: sha512-LhF+9fbIX4iPzhsRLpK5H7iPdvW8L4IwGciXQIOEcuF62+9nw/VQVsOViAOOGxY3OlOKGLFv0sWwJXdwQeTn6A==}
+    dev: false
 
   /@types/node/16.11.2:
     resolution: {integrity: sha512-w34LtBB0OkDTs19FQHXy4Ig/TOXI4zqvXS2Kk1PAsRKZ0I+nik7LlMYxckW0tSNGtvWmzB+mrCTbuEjuB9DVsw==}
@@ -10406,22 +10402,13 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
-  /aws-cdk-lib/2.28.0_constructs@10.0.12:
-    resolution: {integrity: sha512-ZAhIQ+mX2JYx8st6enan8qBzts7o+PXFJxLABIUYZSSus/ScWx9POLIVsV28LXorM4Y2su23VfWM7iVmCNxYAQ==}
+  /aws-cdk-lib/2.38.0_constructs@10.0.12:
+    resolution: {integrity: sha512-OV2F4tcPgQH7P9wWYtS5m8hfO9Bup1FSkHUCzinW42oKTNk717CelkCIZ+aEzf3jdMjyeeNYEIEb++QTU4jdFQ==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
     dependencies:
-      '@balena/dockerignore': 1.0.2
-      case: 1.6.3
       constructs: 10.0.12
-      fs-extra: 9.1.0
-      ignore: 5.2.0
-      jsonschema: 1.4.1
-      minimatch: 3.1.2
-      punycode: 2.1.1
-      semver: 7.3.7
-      yaml: 1.10.2
     dev: false
     bundledDependencies:
       - '@balena/dockerignore'
@@ -10434,8 +10421,8 @@ packages:
       - semver
       - yaml
 
-  /aws-cdk/2.28.0:
-    resolution: {integrity: sha512-d8DyDBnSSLLU39XPH4I4pRF1dX5yGFYJhOR8fFBtoPbpSiE0gJgSMX4RIcNUm2V1ZKVUM8dSc/iWkf+i7+mysg==}
+  /aws-cdk/2.38.0:
+    resolution: {integrity: sha512-ncudJGNEfl8WH3C+3tZTMStOl463ZEdxv/5SLsrsyuFQPYMl6pTVVgV0FK6Zx76dJmFVk8kCyzwc8DWUoJhWcw==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
     optionalDependencies:
@@ -11200,7 +11187,7 @@ packages:
     resolution: {integrity: sha512-xq+q3SRMOxGivLhBNaUdC64hDTQwejJ+H0T/NB1XMtTVEwNTrfFF3gAxiyW0Bu/xWEGhjVKgUcMhCrUy2+uCWg==}
     dependencies:
       base64-js: 1.5.1
-      ieee754: 1.1.13
+      ieee754: 1.2.1
       isarray: 1.0.0
 
   /buffer/5.7.1:
@@ -11383,22 +11370,17 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /case/1.6.3:
-    resolution: {integrity: sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==}
-    engines: {node: '>= 0.8.0'}
-    dev: false
-
   /caseless/0.12.0:
     resolution: {integrity: sha512-4tYFyifaFfGacoiObjJegolkwSU4xQNGbVgUiNYVUxbQ2x2lUsFvY4hVgVzGiIe6WLOPqycWXA40l+PWsxthUw==}
     dev: true
 
-  /cdk-assets/2.28.0:
-    resolution: {integrity: sha512-yU1mrSsnbaKbk0yn6QAcoNLRHLKiEiKjfQDRisSGONioLyu8eWO7E1Le9LFtw63ed8ps7Pi4Tps92K9frK0BZw==}
+  /cdk-assets/2.38.0:
+    resolution: {integrity: sha512-IPs5Xm0KjdUw9g5A30Zcg+gYLbGedczt1hvTX3n0ZzBfkGVxoG/z9hD0KU8ZO2L545BrMzX+ClsRiDcigTqGkw==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
     dependencies:
-      '@aws-cdk/cloud-assembly-schema': 2.28.0
-      '@aws-cdk/cx-api': 2.28.0
+      '@aws-cdk/cloud-assembly-schema': 2.38.0
+      '@aws-cdk/cx-api': 2.38.0
       archiver: 5.3.1
       aws-sdk: 2.1214.0
       glob: 7.2.3
@@ -14751,7 +14733,6 @@ packages:
 
   /ieee754/1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
-    dev: false
 
   /iferr/0.1.5:
     resolution: {integrity: sha1-xg7taebY/bazEEofy8ocGS3FtQE=}
@@ -22369,7 +22350,7 @@ packages:
   /xml2js/0.4.19:
     resolution: {integrity: sha512-esZnJZJOiJR9wWKMyuvSE1y6Dq5LCuJanqhxslH2bxM6duahNZ+HMpCLhBQGZkbX6xRf8x1Y2eJlgt2q3qo49Q==}
     dependencies:
-      sax: 1.2.1
+      sax: 1.2.4
       xmlbuilder: 9.0.7
 
   /xml2js/0.4.23:
@@ -22425,11 +22406,6 @@ packages:
     resolution: {integrity: sha512-yr2icI4glYaNG+KWONODapy2/jDdMSDnrONSjblABjD9B4Z5LgiircSt8m8sRZFNi08kG9Sm0uSHtEmP3zaEGg==}
     engines: {node: '>= 6'}
     dev: true
-
-  /yaml/1.10.2:
-    resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
-    engines: {node: '>= 6'}
-    dev: false
 
   /yargs-parser/13.1.2:
     resolution: {integrity: sha512-3lbsNRf/j+A4QuSZfDRA7HRSfWrzO0YjqTJd5kjAq37Zep1CEgaYmrH9Q3GwPiB9cHyd1Y1UwggGhJGoxipbzg==}
