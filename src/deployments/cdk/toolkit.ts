@@ -14,8 +14,7 @@
 import path from 'path';
 import * as cdk from 'aws-cdk-lib';
 import * as cxschema from 'aws-cdk-lib/cloud-assembly-schema';
-import { CloudAssembly } from 'aws-cdk/lib/api/cxapp/cloud-assembly';
-import { CloudFormationStackArtifact } from 'aws-cdk-lib/cx-api';
+import { CloudFormationStackArtifact, CloudAssembly, Environment } from 'aws-cdk-lib/cx-api';
 import { ToolkitInfo } from 'aws-cdk/lib/api/toolkit-info';
 import { Mode } from 'aws-cdk/lib/api';
 import { setLogLevel } from 'aws-cdk/lib/logging';
@@ -109,7 +108,7 @@ export class CdkToolkit {
     await fulfillAll(promises);
   }
 
-  async bootstrapEnvironment(environment: cdk.Environment) {
+  async bootstrapEnvironment(environment: Environment) {
     console.log(`Bootstrapping environment in account ${environment.account} and region ${environment.region}`);
 
     const trustedAccounts: string[] = [];
@@ -179,7 +178,7 @@ export class CdkToolkit {
     // Merge all stack outputs
     return combinedOutputs;
   }
-  deploymentLog(stack: cx_api.CloudFormationStackArtifact, message: string, messageType: string = 'INFO') {
+  deploymentLog(stack: CloudFormationStackArtifact, message: string, messageType: string = 'INFO') {
     const stackLoggingInfo = {
       stackName: stack.displayName,
       stackEnvironment: stack.environment,
@@ -198,7 +197,9 @@ export class CdkToolkit {
   async deployStack(stack: CloudFormationStackArtifact, retries: number = 0): Promise<StackOutput[]> {
     // Register the assume role plugin
     const assumeRolePlugin = new AssumeProfilePlugin({ region: stack.environment.region });
-    await assumeRolePlugin.init(PluginHost.instance);
+    // await assumeRolePlugin.init(PluginHost.instance);
+    assumeRolePlugin.init(PluginHost.instance);
+    await this.sleep(2000)
     this.deploymentLog(stack, 'Deploying Stack');
     const stackExists = await this.cloudFormation.stackExists({ stack });
     this.deploymentLog(stack, `Stack Exists: ${stackExists}`);
@@ -213,6 +214,7 @@ export class CdkToolkit {
       }
       return [];
     } else if (stackExists) {
+      console.log(stack.environment)
       const sdk = await this.props.sdkProvider.forEnvironment(stack.environment, Mode.ForWriting);
       const cfn = sdk.sdk.cloudFormation();
       if (debugModeEnabled()) {
@@ -221,8 +223,9 @@ export class CdkToolkit {
       this.deploymentLog(stack, 'Describing Stack');
       const existingStack = await cfn
         .describeStacks({
-          StackName: stack.id,
+          StackName: stack.stackName,
         })
+        // StackName: `ASEA-${stack.id}`
         .promise();
       const stackStatus = existingStack?.Stacks?.[0]?.StackStatus ?? '';
       this.deploymentLog(stack, `Stack Status: ${stackStatus}`);
