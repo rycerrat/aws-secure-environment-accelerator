@@ -14,6 +14,7 @@
 import * as path from 'path';
 import * as cdk from 'aws-cdk-lib';
 import * as iam from 'aws-cdk-lib/aws-iam';
+import { Construct } from 'constructs';
 
 const resourceType = 'Custom::EC2ImageFinder';
 

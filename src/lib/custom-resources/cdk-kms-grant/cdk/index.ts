@@ -17,6 +17,7 @@ import * as iam from 'aws-cdk-lib/aws-iam';
 import * as kms from 'aws-cdk-lib/aws-kms';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import { HandlerProperties } from '@aws-accelerator/custom-resource-kms-grant-runtime';
+import { Construct } from 'constructs';
 
 const resourceType = 'Custom::KMSGrant';
 

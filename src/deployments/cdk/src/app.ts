@@ -28,7 +28,7 @@ export interface PhaseInfo {
 }
 
 // Right now there are only phases -1, 0, 1, 2, 3, 4, 5
-export const phases: PhaseInfo[] = [-1, 0, 1, 2, 3, 4, 5, 6].map(id => ({
+export const phases: PhaseInfo[] = [-1, 0, 1, 2, 3, 4, 5].map(id => ({
   runner: () => import(`./apps/phase-${id}`).then(phase => phase.deploy),
   id: `${id}`,
   name: `${id}`,

@@ -18,8 +18,6 @@ import * as cdk from 'aws-cdk-lib';
 import { AcceleratorStack, AcceleratorStackProps } from '@aws-accelerator/cdk-accelerator/src/core/accelerator-stack';
 import { Context } from '../utils/context';
 import { Account, getAccountId } from '../utils/accounts';
-import { CognitoUserPoolsAuthorizer } from 'aws-cdk-lib/aws-apigateway';
-import { ConfigurationSetTlsPolicy } from 'aws-cdk-lib/aws-ses';
 
 export interface AccountStackProps extends Omit<AcceleratorStackProps, 'env'> {
   accountId: string;
@@ -121,17 +119,10 @@ export class AccountStacks {
     inScope?: boolean,
   ): AccountStack | undefined {
     const regionOrDefault = region ?? this.props.context.defaultRegion;
-    // console.log('***********')
-    // console.log(accountKey)
-    // console.log(region)
-    // console.log(suffix)
-    // console.log(inScope)
     
     const existingApp = !suffix
       ? this.apps.find(s => s.accountKey === accountKey && s.stack.region === regionOrDefault)
       : this.apps.find(s => s.accountKey === accountKey && s.stack.region === regionOrDefault && s.suffix === suffix);
-      // console.log(existingApp?.stack)
-      // console.log('------------')
     if (existingApp) {
       return existingApp.stack;
     }
@@ -144,10 +135,6 @@ export class AccountStacks {
     }
 
     const stackName = this.createStackName(accountKey, regionOrDefault, suffix);
-    console.log('************')
-    console.log(stackName)
-    console.log(region)
-    console.log('************')
     const stackLogicalId = this.createStackLogicalId(accountKey, regionOrDefault, suffix);
     const terminationProtection = process.env.CONFIG_MODE === 'development' ? false : true;
     const acceleratorPrefix = this.props.context.acceleratorPrefix;

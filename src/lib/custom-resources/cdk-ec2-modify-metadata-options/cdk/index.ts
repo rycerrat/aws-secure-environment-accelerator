@@ -14,6 +14,7 @@
 import * as cdk from 'aws-cdk-lib';
 import * as custom from 'aws-cdk-lib/custom-resources';
 import * as iam from 'aws-cdk-lib/aws-iam';
+import { Construct } from 'constructs';
 
 export interface EC2ModifyMetadataOptionsProps {
   ec2Name: string;

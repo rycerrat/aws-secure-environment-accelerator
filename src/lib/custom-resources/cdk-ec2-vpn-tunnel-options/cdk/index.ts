@@ -15,6 +15,7 @@ import * as path from 'path';
 import * as cdk from 'aws-cdk-lib';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import { HandlerProperties } from '@aws-accelerator/custom-resource-ec2-vpn-tunnel-options-runtime';
+import { Construct } from 'constructs';
 
 const resourceType = 'Custom::EC2VpnTunnelOptions';
 

@@ -22,6 +22,7 @@ import {
   AssignedVpcCidrPool,
   getSubnetCidrPools,
 } from '@aws-accelerator/common-outputs/src/cidr-pools';
+import { Construct } from 'constructs';
 
 export interface NameToSecurityGroupMap {
   [key: string]: ec2.CfnSecurityGroup;

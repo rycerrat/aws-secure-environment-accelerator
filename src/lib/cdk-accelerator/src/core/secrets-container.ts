@@ -107,13 +107,13 @@ export class SecretsContainer extends Construct {
     return this.keyAlias;
   }
 
-  protected onPrepare(): void {
-    this.encryptionKey.addToResourcePolicy(
-      new iam.PolicyStatement({
-        actions: ['kms:Decrypt'],
-        resources: ['*'],
-        principals: this.principals,
-      }),
-    );
-  }
+  // protected onPrepare(): void {
+  //   this.encryptionKey.addToResourcePolicy(
+  //     new iam.PolicyStatement({
+  //       actions: ['kms:Decrypt'],
+  //       resources: ['*'],
+  //       principals: this.principals,
+  //     }),
+  //   );
+  // }
 }

@@ -17,6 +17,7 @@ import * as iam from 'aws-cdk-lib/aws-iam';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import { HandlerProperties } from '@aws-accelerator/custom-resource-macie-update-session-runtime';
 import { MacieFrequency, MacieStatus } from '@aws-accelerator/custom-resource-macie-enable-runtime';
+import { Construct } from 'constructs';
 
 const resourceType = 'Custom::MacieUpdateSession';
 

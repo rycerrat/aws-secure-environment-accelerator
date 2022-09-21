@@ -13,6 +13,7 @@
 
 import * as cdk from 'aws-cdk-lib';
 import * as r53Resolver from 'aws-cdk-lib/aws-route53resolver';
+import { Construct } from 'constructs';
 
 export interface ResolverRuleProps {
   vpcId: string;
