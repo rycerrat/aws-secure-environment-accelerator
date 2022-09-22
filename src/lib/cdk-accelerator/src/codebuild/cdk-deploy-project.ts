@@ -169,6 +169,16 @@ export class PrebuiltCdkDeployProject extends CdkDeployProjectBase {
       buildSpec: codebuild.BuildSpec.fromObject({
         version: '0.2',
         phases: {
+          pre_build: {
+            commands: [
+              'sudo mkdir /usr/local/awscliv2',
+              'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"',
+              'unzip -q awscliv2.zip',
+              'sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/awscliv2 --update',
+              'export PATH="/usr/local/bin:$PATH"',
+              'aws --version'
+            ]
+          },
           build: {
             commands: [`cd ${appDir}`, `sh ${entrypointFileName}`],
           },
@@ -194,7 +204,7 @@ export class PrebuiltCdkDeployProject extends CdkDeployProjectBase {
  */
 function installPackageManagerCommands(packageManager: PackageManager) {
   if (packageManager === 'pnpm') {
-    return ['npm install --global pnpm@6.2.3'];
+    return ['npm install --global pnpm@6.2.3', ];
   }
   throw new Error(`Unsupported package manager ${packageManager}`);
 }
