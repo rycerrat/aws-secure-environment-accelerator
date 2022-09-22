@@ -252,6 +252,7 @@ importers:
       '@aws-cdk/cx-api': 2.38.0
       '@types/js-yaml': 4.0.1
       '@types/semver': 7.3.5
+      aws-cdk: 2.38.0
       aws-cdk-lib: 2.38.0_constructs@10.0.12
       cdk-assets: 2.38.0
       constructs: 10.0.12
@@ -271,7 +272,6 @@ importers:
       '@types/jest': 25.2.3
       '@types/mri': 1.1.0
       '@types/node': 14.14.31
-      aws-cdk: 2.38.0
       eslint: 7.25.0
       jest: 25.2.4
       mri: 1.1.6
