@@ -147,6 +147,13 @@ export class PrebuiltCdkDeployProject extends CdkDeployProjectBase {
       path.join(this.projectTmpDir, 'Dockerfile'),
       [
         'FROM public.ecr.aws/bitnami/node:14',
+        // Upgrade AWS CLI to v2
+        'mkdir /usr/local/awscliv2',
+        'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"',
+        'unzip -q awscliv2.zip',
+        './aws/install --bin-dir /usr/local/bin --install-dir /usr/local/awscliv2 --update',
+        'export PATH="/usr/local/bin:$PATH"',
+        'aws --version',
         // Install the package manager
         ...installPackageManagerCommands(props.packageManager).map(cmd => `RUN ${cmd}`),
         `WORKDIR ${appDir}`,
@@ -169,16 +176,6 @@ export class PrebuiltCdkDeployProject extends CdkDeployProjectBase {
       buildSpec: codebuild.BuildSpec.fromObject({
         version: '0.2',
         phases: {
-          pre_build: {
-            commands: [
-              'mkdir /usr/local/awscliv2',
-              'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"',
-              'unzip -q awscliv2.zip',
-              './aws/install --bin-dir /usr/local/bin --install-dir /usr/local/awscliv2 --update',
-              'export PATH="/usr/local/bin:$PATH"',
-              'aws --version'
-            ]
-          },
           build: {
             commands: [`cd ${appDir}`, `sh ${entrypointFileName}`],
           },
