@@ -162,6 +162,7 @@ importers:
       '@aws-accelerator/custom-resource-vpc-default-security-group': workspace:*
       '@aws-accelerator/deployments': 'link:'
       '@aws-accelerator/deployments-runtime': workspace:*
+      '@aws-cdk/cloud-assembly-schema': 1.144.0
       '@aws-cdk/cloudformation-diff': 2.38.0
       '@aws-cdk/core': 1.172.0
       '@aws-cdk/cx-api': 2.38.0
@@ -247,6 +248,7 @@ importers:
       '@aws-accelerator/custom-resource-ssm-session-manager-document': link:../../lib/custom-resources/cdk-ssm-session-manager-document
       '@aws-accelerator/custom-resource-vpc-default-security-group': link:../../lib/custom-resources/cdk-vpc-default-security-group
       '@aws-accelerator/deployments': 'link:'
+      '@aws-cdk/cloud-assembly-schema': 1.144.0
       '@aws-cdk/cloudformation-diff': 2.38.0
       '@aws-cdk/core': 1.172.0
       '@aws-cdk/cx-api': 2.38.0
@@ -3066,6 +3068,14 @@ packages:
       fs-extra: 9.1.0
       md5: 2.3.0
     dev: false
+
+  /@aws-cdk/cloud-assembly-schema/1.144.0:
+    resolution: {integrity: sha512-6cVsFkLbHSe2yPZjkJ03JMPNL9hmalgPU2EXFi3oEt6pkdPZzmVMn6xVZ1DpoODx0NYH5+edRwkdvuxggNdbew==}
+    engines: {node: '>= 10.13.0 <13 || >=13.7.0'}
+    dev: false
+    bundledDependencies:
+      - jsonschema
+      - semver
 
   /@aws-cdk/cloud-assembly-schema/1.172.0:
     resolution: {integrity: sha512-Y+o/ZYT23lcoUsLJWZmpgICxuzFHDh5oNzro7ip2GG1Gs3UlZ5rMS755f22vHBNxJ8lgTFrbsI7Wr7kDGGnyNw==}

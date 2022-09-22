@@ -12,12 +12,11 @@
  */
 
 import path from 'path';
-import * as cdk from 'aws-cdk-lib';
-// import * as cxschema from 'aws-cdk-lib/cloud-assembly-schema';
 import * as cxschema from '@aws-cdk/cloud-assembly-schema';
-// import { CloudFormationStackArtifact, CloudAssembly, Environment } from 'aws-cdk-lib/cx-api';
-import { CloudFormationStackArtifact, CloudAssembly, Environment } from '@aws-cdk/cx-api';
-import { Mode, ToolkitInfo } from 'aws-cdk';
+import { Environment } from 'aws-cdk-lib/cx-api';
+import { CloudFormationStackArtifact, CloudAssembly } from '@aws-cdk/cx-api';
+import { ToolkitInfo } from 'aws-cdk/lib/api/toolkit-info';
+import { Mode } from 'aws-cdk/lib/api';
 import { setLogLevel } from 'aws-cdk/lib/logging';
 import { Bootstrapper } from 'aws-cdk/lib/api/bootstrap';
 import { Command, Configuration } from 'aws-cdk/lib/settings';
@@ -28,6 +27,7 @@ import { debugModeEnabled } from '@aws-cdk/core/lib/debug'
 import { AssumeProfilePlugin } from '@aws-accelerator/cdk-plugin-assume-role/src/assume-role-plugin';
 import { fulfillAll } from './promise';
 import { promises as fsp } from 'fs';
+import * as cdk from '@aws-cdk/core';
 
 // Set microstats emitters
 // Set debug logging
@@ -199,10 +199,8 @@ export class CdkToolkit {
     // Register the assume role plugin
     const assumeRolePlugin = new AssumeProfilePlugin({ region: stack.environment.region });
     assumeRolePlugin.init(PluginHost.instance);
-    // await assumeRolePlugin.init(PluginHost.instance);
     this.deploymentLog(stack, 'Deploying Stack');
     const stackExists = await this.cloudFormation.stackExists({ stack });
-    // const stackExists = await this.cloudFormation.stackExists(StackExistsOptions({ stack }));
     this.deploymentLog(stack, `Stack Exists: ${stackExists}`);
 
     const resources = Object.keys(stack.template.Resources || {});
@@ -226,7 +224,6 @@ export class CdkToolkit {
         .describeStacks({
           StackName: stack.stackName,
         })
-        // StackName: `ASEA-${stack.id}`
         .promise();
       const stackStatus = existingStack?.Stacks?.[0]?.StackStatus ?? '';
       this.deploymentLog(stack, `Stack Status: ${stackStatus}`);

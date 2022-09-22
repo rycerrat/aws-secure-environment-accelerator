@@ -90,7 +90,8 @@
     "aws-cdk": "2.38.0",
     "@aws-cdk/cloudformation-diff": "2.38.0",
     "@aws-cdk/core": "1.172.0",
-    "proxy-agent": "5.0.0"
+    "proxy-agent": "5.0.0",
+    "@aws-cdk/cloud-assembly-schema": "1.144.0"
 
   },
   "devDependencies": {
