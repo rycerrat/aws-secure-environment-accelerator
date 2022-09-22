@@ -13,16 +13,16 @@
 
 import path from 'path';
 import * as cdk from 'aws-cdk-lib';
-import * as cxschema from 'aws-cdk-lib/cloud-assembly-schema';
+// import * as cxschema from 'aws-cdk-lib/cloud-assembly-schema';
+import * as cxschema from '@aws-cdk/cloud-assembly-schema';
 // import { CloudFormationStackArtifact, CloudAssembly, Environment } from 'aws-cdk-lib/cx-api';
 import { CloudFormationStackArtifact, CloudAssembly, Environment } from '@aws-cdk/cx-api';
-import { ToolkitInfo } from 'aws-cdk/lib/api/toolkit-info';
-import { Mode } from 'aws-cdk/lib/api';
+import { Mode, ToolkitInfo } from 'aws-cdk';
 import { setLogLevel } from 'aws-cdk/lib/logging';
 import { Bootstrapper } from 'aws-cdk/lib/api/bootstrap';
 import { Command, Configuration } from 'aws-cdk/lib/settings';
 import { SdkProvider } from 'aws-cdk/lib/api/aws-auth';
-import { CloudFormationDeployments, StackExistsOptions } from 'aws-cdk/lib/api/cloudformation-deployments';
+import { CloudFormationDeployments } from 'aws-cdk/lib/api/cloudformation-deployments';
 import { PluginHost } from 'aws-cdk/lib/api/plugin'
 import { debugModeEnabled } from '@aws-cdk/core/lib/debug'
 import { AssumeProfilePlugin } from '@aws-accelerator/cdk-plugin-assume-role/src/assume-role-plugin';
