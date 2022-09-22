@@ -14,14 +14,15 @@
 import path from 'path';
 import * as cdk from 'aws-cdk-lib';
 import * as cxschema from 'aws-cdk-lib/cloud-assembly-schema';
-import { CloudFormationStackArtifact, CloudAssembly, Environment } from 'aws-cdk-lib/cx-api';
+// import { CloudFormationStackArtifact, CloudAssembly, Environment } from 'aws-cdk-lib/cx-api';
+import { CloudFormationStackArtifact, CloudAssembly, Environment } from '@aws-cdk/cx-api';
 import { ToolkitInfo } from 'aws-cdk/lib/api/toolkit-info';
 import { Mode } from 'aws-cdk/lib/api';
 import { setLogLevel } from 'aws-cdk/lib/logging';
 import { Bootstrapper } from 'aws-cdk/lib/api/bootstrap';
 import { Command, Configuration } from 'aws-cdk/lib/settings';
 import { SdkProvider } from 'aws-cdk/lib/api/aws-auth';
-import { CloudFormationDeployments } from 'aws-cdk/lib/api/cloudformation-deployments';
+import { CloudFormationDeployments, StackExistsOptions } from 'aws-cdk/lib/api/cloudformation-deployments';
 import { PluginHost } from 'aws-cdk/lib/api/plugin'
 import { debugModeEnabled } from '@aws-cdk/core/lib/debug'
 import { AssumeProfilePlugin } from '@aws-accelerator/cdk-plugin-assume-role/src/assume-role-plugin';
@@ -197,11 +198,11 @@ export class CdkToolkit {
   async deployStack(stack: CloudFormationStackArtifact, retries: number = 0): Promise<StackOutput[]> {
     // Register the assume role plugin
     const assumeRolePlugin = new AssumeProfilePlugin({ region: stack.environment.region });
-    // await assumeRolePlugin.init(PluginHost.instance);
     assumeRolePlugin.init(PluginHost.instance);
-    await this.sleep(2000)
+    // await assumeRolePlugin.init(PluginHost.instance);
     this.deploymentLog(stack, 'Deploying Stack');
     const stackExists = await this.cloudFormation.stackExists({ stack });
+    // const stackExists = await this.cloudFormation.stackExists(StackExistsOptions({ stack }));
     this.deploymentLog(stack, `Stack Exists: ${stackExists}`);
 
     const resources = Object.keys(stack.template.Resources || {});
