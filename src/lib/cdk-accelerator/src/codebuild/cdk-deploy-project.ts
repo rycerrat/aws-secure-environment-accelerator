@@ -148,12 +148,12 @@ export class PrebuiltCdkDeployProject extends CdkDeployProjectBase {
       [
         'FROM public.ecr.aws/bitnami/node:14',
         // Upgrade AWS CLI to v2
-        'mkdir /usr/local/awscliv2',
-        'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"',
-        'unzip -q awscliv2.zip',
-        './aws/install --bin-dir /usr/local/bin --install-dir /usr/local/awscliv2 --update',
-        'export PATH="/usr/local/bin:$PATH"',
-        'aws --version',
+        'RUN mkdir /usr/local/awscliv2',
+        'RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"',
+        'RUN unzip -q awscliv2.zip',
+        'RUN ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/awscliv2 --update',
+        'RUN export PATH="/usr/local/bin:$PATH"',
+        'RUN aws --version',
         // Install the package manager
         ...installPackageManagerCommands(props.packageManager).map(cmd => `RUN ${cmd}`),
         `WORKDIR ${appDir}`,
