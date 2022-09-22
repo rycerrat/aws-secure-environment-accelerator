@@ -200,7 +200,8 @@ export class CdkToolkit {
     const assumeRolePlugin = new AssumeProfilePlugin({ region: stack.environment.region });
     assumeRolePlugin.init(PluginHost.instance);
     this.deploymentLog(stack, 'Deploying Stack');
-    const stackExists = await this.cloudFormation.stackExists({ stack });
+    // const stackExists = await this.cloudFormation.stackExists({ stack });
+    const stackExists = true;
     this.deploymentLog(stack, `Stack Exists: ${stackExists}`);
 
     const resources = Object.keys(stack.template.Resources || {});
