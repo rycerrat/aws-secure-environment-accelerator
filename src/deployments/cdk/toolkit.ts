@@ -161,6 +161,7 @@
      let combinedOutputs: StackOutput[];
      if (parallel) {
        // Deploy all stacks in parallel
+       console.log(JSON.stringify(stacks))
        const promises = stacks.map(stack => this.deployStack(stack));
        // Wait for all promises to be fulfilled
        const outputsList = await fulfillAll(promises);
@@ -219,7 +220,7 @@
        this.deploymentLog(stack, 'Describing Stack');
        const existingStack = await cfn
          .describeStacks({
-           StackName: stack.id,
+           StackName: stack.stackName,
          })
          .promise();
        const stackStatus = existingStack?.Stacks?.[0]?.StackStatus ?? '';
