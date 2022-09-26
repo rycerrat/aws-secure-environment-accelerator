@@ -161,7 +161,6 @@
      let combinedOutputs: StackOutput[];
      if (parallel) {
        // Deploy all stacks in parallel
-       console.log(JSON.stringify(stacks))
        const promises = stacks.map(stack => this.deployStack(stack));
        // Wait for all promises to be fulfilled
        const outputsList = await fulfillAll(promises);
