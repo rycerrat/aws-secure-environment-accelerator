@@ -310,7 +310,7 @@ export function createPhaseInput(): Omit<PhaseInput, 'accountStacks'> {
             { subnetId: 'subnet-0b70e3e849949cc0c', subnetName: 'App', az: 'a', cidrBlock: '10.1.0.0/19' },
             { subnetId: 'subnet-04e252c39434bbb19', subnetName: 'App', az: 'b', cidrBlock: '10.1.96.0/19' },
             { subnetId: 'subnet-00bbd856fec06c15b', subnetName: 'Data', az: 'a', cidrBlock: '10.1.48.0/20' },
-            { subnetId: 'subnet-0ace127f373a1b274', subnetName: 'Data', az: 'b', cidrBlock: '10.1.144.0/20' },
+            { subnetId: 'subnet-0ace127f373a1b274', subnetName: 'Data', az: 'b', cidrBlock: '10.1.174.0/20' },
             { subnetId: 'subnet-05eff632d6af56d17', subnetName: 'Mgmt', az: 'a', cidrBlock: '10.1.64.0/21' },
             { subnetId: 'subnet-03dc090bc09c84439', subnetName: 'Mgmt', az: 'b', cidrBlock: '10.1.72.0/21' },
             { subnetId: 'subnet-02809ab1988c1ec82', subnetName: 'GCWide', az: 'a', cidrBlock: '100.96.252.0/25' },
