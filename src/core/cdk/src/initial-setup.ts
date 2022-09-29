@@ -37,6 +37,7 @@ import { StoreOutputsTask } from './tasks/store-outputs-task';
 import { StoreOutputsToSSMTask } from './tasks/store-outputs-to-ssm-task';
 import { CDKBootstrapTask } from './tasks/cdk-bootstrap';
 import * as kms from '@aws-cdk/aws-kms';
+import { Construct } from 'constructs'
 
 const VPC_CIDR_POOL_TABLE = 'cidr-vpc-assign';
 const SUBNET_CIDR_POOL_TABLE = 'cidr-subnet-assign';
@@ -71,7 +72,7 @@ export namespace InitialSetup {
 }
 
 export class InitialSetup extends AcceleratorStack {
-  constructor(scope: cdk.Construct, id: string, props: InitialSetup.Props) {
+  constructor(scope: Construct, id: string, props: InitialSetup.Props) {
     super(scope, id, props);
 
     new InitialSetup.Pipeline(this, 'Pipeline', props);
@@ -81,8 +82,8 @@ export class InitialSetup extends AcceleratorStack {
 export namespace InitialSetup {
   export type PipelineProps = CommonProps;
 
-  export class Pipeline extends cdk.Construct {
-    constructor(scope: cdk.Construct, id: string, props: PipelineProps) {
+  export class Pipeline extends Construct {
+    constructor(scope: Construct, id: string, props: PipelineProps) {
       super(scope, id);
 
       const { enablePrebuiltProject } = props;
