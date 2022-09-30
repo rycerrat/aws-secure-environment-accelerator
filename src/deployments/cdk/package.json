@@ -115,7 +115,8 @@
     "promptly": "3.2.0",
     "proxy-agent": "5.0.0",
     "cdk-assets": "1.74.0",
-    "@aws-cdk/cloudformation-diff": "1.174.0"
+    "@aws-cdk/cloudformation-diff": "1.174.0",
+    "aws-sdk": "2.944.0"
   },
   "devDependencies": {
     "@aws-accelerator/cdk-plugin-assume-role": "workspace:*",
