@@ -36,7 +36,16 @@
                             "Effect": "Allow",
                             "Principal": {
                                 "AWS": {
-                                    "Sub": "arn:aws:iam::${AWS:AccountId}:role/${AssumeBySelfRoleName}"
+                                    "Fn::Sub": "arn:aws:iam::${AWS::AccountId}:role/${AssumeBySelfRoleName}"
+                                }
+                            }
+                        },
+                        {
+                            "Action": "sts:AssumeRole",
+                            "Effect": "Allow",
+                            "Principal": {
+                                "AWS": {
+                                    "Ref": "${AWS::AccountId}"
                                 }
                             }
                         },
