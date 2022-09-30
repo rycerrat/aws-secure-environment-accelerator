@@ -580,7 +580,10 @@ export namespace InitialSetup {
             RoleName: props.stateMachineExecutionRole,
             MaxSessionDuration: `${buildTimeout.toSeconds()}`,
             // TODO Only add root role for development environments
-            AssumedByRoleArn: `arn:aws:iam::${stack.account}:root,${pipelineRole.roleArn},arn:aws:iam::${stack.account}:role/${props.acceleratorPrefix}PipelineRole`,
+            AssumedByRoleArn: `arn:aws:iam::${stack.account}:root,
+              ${pipelineRole.roleArn},
+              arn:aws:iam::${stack.account}:role/${props.acceleratorPrefix}PipelineRole,
+              arn:aws:iam::${'AWS::AccountId'}:role/${props.acceleratorPrefix}PipelineRole`,
             AcceleratorPrefix: props.acceleratorPrefix.endsWith('-')
               ? props.acceleratorPrefix.slice(0, -1).toLowerCase()
               : props.acceleratorPrefix.toLowerCase(),
