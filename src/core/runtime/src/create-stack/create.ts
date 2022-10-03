@@ -23,6 +23,7 @@ interface CreateStackInput {
   stackCapabilities: string[];
   stackParameters: { [key: string]: string };
   stackTemplate: StackTemplateLocation;
+  managementAccountTemplate?: StackTemplateLocation;
   accountId?: string;
   assumeRoleName?: string;
   region?: string;
@@ -42,6 +43,7 @@ export const handler = async (input: CreateStackInput) => {
     stackCapabilities,
     stackParameters,
     stackTemplate,
+    managementAccountTemplate,
     accountId,
     assumeRoleName,
     region,
@@ -58,30 +60,18 @@ export const handler = async (input: CreateStackInput) => {
   console.debug(`Creating stack template`);
   console.debug(stackTemplate);
 
-  //fix this
+  // Load the template body from the given location
+  let templateBody = await getTemplateBody(stackTemplate);
+
+
   if(parametersTableName){
     const accounts = await loadAccounts(parametersTableName!, dynamodb);
-    console.log(accounts)
-    console.log(accounts.find(acc => acc.id === accountId)?.key!);
-}
+    if((accounts.find(acc => acc.id === accountId)?.key!) === 'management'){
+      templateBody = await getTemplateBody(managementAccountTemplate!);
+    }
+  }
   
-
-  //const targetAccountKeys: string[] = [];
-  // if (targetAccounts) {
-  //   targetAccounts.map(targetAccount => {
-  //     if (targetAccount === 'ALL') {
-  //       targetAccountKeys.push('ALL');
-  //     } else if (targetAccount === 'NEW') {
-  //       targetAccountKeys.push('NEW');
-  //     } else {
-  //       targetAccountKeys.push(accounts.find(acc => acc.id === targetAccount)?.key!);
-  //     }
-  //   });
-  // }
-
-  // Load the template body from the given location
-  const templateBody = await getTemplateBody(stackTemplate);
-
+  
   let cfn: CloudFormation;
   if (accountId && assumeRoleName) {
     const credentials = await sts.getCredentialsForAccountAndRole(accountId, assumeRoleName);

@@ -559,6 +559,8 @@ export namespace InitialSetup {
       );
 
       const accountsPath = path.join(__dirname, 'assets', 'execution-role.template.json');
+      const managementAccountPath = path.join(__dirname, 'assets', 'management-execution-role.template.json');
+      const managementAccountExecutionRoleContent = fs.readFileSync(managementAccountPath);
       const executionRoleContent = fs.readFileSync(accountsPath);
 
       const installRolesStateMachine = new sfn.StateMachine(this, `${props.acceleratorPrefix}InstallRoles_sm`, {
@@ -589,6 +591,7 @@ export namespace InitialSetup {
               : props.acceleratorPrefix.toLowerCase(),
           },
           stackTemplate: executionRoleContent.toString(),
+          managementAccountTemplate: managementAccountExecutionRoleContent.toString(),
           'accountId.$': '$.accountId',
           'assumeRoleName.$': '$.organizationAdminRole',
           parametersTableName: parametersTable.tableName
