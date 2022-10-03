@@ -14,6 +14,9 @@
 import { CloudFormation, objectToCloudFormationParameters } from '@aws-accelerator/common/src/aws/cloudformation';
 import { StackTemplateLocation, getTemplateBody } from '../create-stack-set/create-stack-set';
 import { STS } from '@aws-accelerator/common/src/aws/sts';
+import { DynamoDB } from '@aws-accelerator/common/src/aws/dynamodb';
+
+import { loadAccounts } from '../utils/load-accounts';
 
 interface CreateStackInput {
   stackName: string;
@@ -25,8 +28,10 @@ interface CreateStackInput {
   region?: string;
   ignoreAccountId?: string;
   ignoreRegion?: string;
+  parametersTableName: string;
 }
 
+const dynamodb = new DynamoDB();
 const sts = new STS();
 export const handler = async (input: CreateStackInput) => {
   console.log(`Creating stack...`);
@@ -42,6 +47,7 @@ export const handler = async (input: CreateStackInput) => {
     region,
     ignoreAccountId,
     ignoreRegion,
+    parametersTableName
   } = input;
 
   if (ignoreAccountId && ignoreAccountId === accountId && !ignoreRegion) {
@@ -51,6 +57,22 @@ export const handler = async (input: CreateStackInput) => {
   }
   console.debug(`Creating stack template`);
   console.debug(stackTemplate);
+
+  const accounts = await loadAccounts(parametersTableName, dynamodb);
+  console.log(accounts)
+
+  const targetAccountKeys: string[] = [];
+  // if (targetAccounts) {
+  //   targetAccounts.map(targetAccount => {
+  //     if (targetAccount === 'ALL') {
+  //       targetAccountKeys.push('ALL');
+  //     } else if (targetAccount === 'NEW') {
+  //       targetAccountKeys.push('NEW');
+  //     } else {
+  //       targetAccountKeys.push(accounts.find(acc => acc.id === targetAccount)?.key!);
+  //     }
+  //   });
+  // }
 
   // Load the template body from the given location
   const templateBody = await getTemplateBody(stackTemplate);

@@ -591,6 +591,7 @@ export namespace InitialSetup {
           stackTemplate: executionRoleContent.toString(),
           'accountId.$': '$.accountId',
           'assumeRoleName.$': '$.organizationAdminRole',
+          parametersTableName: parametersTable.tableName
         }),
         resultPath: 'DISCARD',
       });
