@@ -59,9 +59,12 @@ export const handler = async (input: CreateStackInput) => {
   console.debug(stackTemplate);
 
   //fix this
-  const accounts = await loadAccounts(parametersTableName!, dynamodb);
-  console.log(accounts)
-  console.log(accounts.find(acc => acc.id === accountId)?.key!);
+  if(parametersTableName){
+    const accounts = await loadAccounts(parametersTableName!, dynamodb);
+    console.log(accounts)
+    console.log(accounts.find(acc => acc.id === accountId)?.key!);
+}
+  
 
   //const targetAccountKeys: string[] = [];
   // if (targetAccounts) {
