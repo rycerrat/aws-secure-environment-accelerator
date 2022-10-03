@@ -28,7 +28,7 @@ interface CreateStackInput {
   region?: string;
   ignoreAccountId?: string;
   ignoreRegion?: string;
-  parametersTableName: string;
+  parametersTableName?: string;
 }
 
 const dynamodb = new DynamoDB();
@@ -58,10 +58,12 @@ export const handler = async (input: CreateStackInput) => {
   console.debug(`Creating stack template`);
   console.debug(stackTemplate);
 
-  const accounts = await loadAccounts(parametersTableName, dynamodb);
+  //fix this
+  const accounts = await loadAccounts(parametersTableName!, dynamodb);
   console.log(accounts)
+  console.log(accounts.find(acc => acc.id === accountId)?.key!);
 
-  const targetAccountKeys: string[] = [];
+  //const targetAccountKeys: string[] = [];
   // if (targetAccounts) {
   //   targetAccounts.map(targetAccount => {
   //     if (targetAccount === 'ALL') {
