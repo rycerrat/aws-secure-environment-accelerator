@@ -13,8 +13,7 @@
 
 import path from 'path';
 import * as cxschema from '@aws-cdk/cloud-assembly-schema';
-import { Environment } from 'aws-cdk-lib/cx-api';
-import { CloudFormationStackArtifact, CloudAssembly } from '@aws-cdk/cx-api';
+import { CloudFormationStackArtifact, CloudAssembly, Environment } from '@aws-cdk/cx-api';
 import { ToolkitInfo } from 'aws-cdk/lib/api/toolkit-info';
 import { Mode } from 'aws-cdk/lib/api';
 import { setLogLevel } from 'aws-cdk/lib/logging';
@@ -28,6 +27,7 @@ import { AssumeProfilePlugin } from '@aws-accelerator/cdk-plugin-assume-role/src
 import { fulfillAll } from './promise';
 import { promises as fsp } from 'fs';
 import * as cdk from '@aws-cdk/core';
+import * as AWS from 'aws-sdk';
 
 // Set microstats emitters
 // Set debug logging
@@ -89,6 +89,28 @@ export class CdkToolkit {
       },
     });
     await configuration.load();
+
+    /*  The code below forces an STS Assume role on itself to address an issue with new CDK Version Upgrade
+     */
+    const stsClient = new AWS.STS({});
+    const getCallerIdentityResponse = await stsClient.getCallerIdentity({}).promise();
+    const getCallerIdentityResponseArraySplitBySlash = getCallerIdentityResponse.Arn!.split('/');
+    getCallerIdentityResponseArraySplitBySlash.pop();
+    const roleName = getCallerIdentityResponseArraySplitBySlash.pop();
+    const accountId = getCallerIdentityResponse.Account;
+    const roleArn = `arn:aws:iam::${accountId}:role/${roleName}`;
+
+    console.log(`[accelerator] management account roleArn => ${roleArn}`);
+
+    const assumeRoleCredential = await stsClient
+      .assumeRole({ RoleArn: roleArn, RoleSessionName: 'acceleratorAssumeRoleSession' })
+      .promise();
+
+    process.env['AWS_ACCESS_KEY_ID'] = assumeRoleCredential.Credentials!.AccessKeyId!;
+    process.env['AWS_ACCESS_KEY'] = assumeRoleCredential.Credentials!.AccessKeyId!;
+    process.env['AWS_SECRET_KEY'] = assumeRoleCredential.Credentials!.SecretAccessKey!;
+    process.env['AWS_SECRET_ACCESS_KEY'] = assumeRoleCredential.Credentials!.SecretAccessKey!;
+    process.env['AWS_SESSION_TOKEN'] = assumeRoleCredential.Credentials!.SessionToken;
 
     const sdkProvider = await SdkProvider.withAwsCliCompatibleDefaults({
       profile: configuration.settings.get(['profile']),
