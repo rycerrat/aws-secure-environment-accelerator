@@ -40,13 +40,7 @@ export class S3UpdateLogArchivePolicy extends Construct {
     super(scope, id);
 
     const { roles, logBucket, aesLogBucket, acceleratorPrefix } = props;
-  }
 
-  get role(): iam.IRole {
-    return this.lambdaFunction.role!;
-  }
-
-  protected onPrepare() {
     const handlerProperties: HandlerProperties = {
       roles: this.props.roles,
       logBucketArn: this.props.logBucket.bucketArn,
@@ -69,6 +63,34 @@ export class S3UpdateLogArchivePolicy extends Construct {
       properties: handlerProperties,
     });
   }
+
+  get role(): iam.IRole {
+    return this.lambdaFunction.role!;
+  }
+
+  // protected onPrepare() {
+  //   const handlerProperties: HandlerProperties = {
+  //     roles: this.props.roles,
+  //     logBucketArn: this.props.logBucket.bucketArn,
+  //     logBucketName: this.props.logBucket.bucketName,
+  //     logBucketKmsKeyArn: this.props.logBucket.encryptionKey?.keyArn,
+  //     aesLogBucketArn: this.props.aesLogBucket.bucketArn,
+  //     aesLogBucketName: this.props.aesLogBucket.bucketName,
+  //   };
+
+  //   const forceUpdate = this.props.forceUpdate ?? true;
+  //   if (forceUpdate) {
+  //     // Add a dummy value that is a random number to update the resource every time
+  //     handlerProperties.forceUpdate = Math.round(Math.random() * 1000000);
+  //   }
+
+  //   this.resource = new cdk.CustomResource(this, 'Resource', {
+  //     resourceType,
+  //     serviceToken: this.lambdaFunction.functionArn,
+  //     removalPolicy: this.props.removalPolicy ?? cdk.RemovalPolicy.DESTROY,
+  //     properties: handlerProperties,
+  //   });
+  // }
 
   private get lambdaFunction(): lambda.Function {
     const constructName = `${resourceType}Lambda`;
