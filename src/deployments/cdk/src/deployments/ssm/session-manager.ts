@@ -90,11 +90,13 @@ export async function step1(props: SSMStep1Props) {
       ssmKey.grantEncryptDecrypt(new AccountPrincipal(cdk.Aws.ACCOUNT_ID));
       ssmKey.grantEncryptDecrypt(new ServicePrincipal('logs.amazonaws.com'));
 
+      console.log('About to create log group....')
       const logGroup = new LogGroup(accountStack, 'SSMLogGroup', {
         logGroupName: createLogGroupName('SSM'),
         roleArn: logGroupLambdaRoleOutput.roleArn,
         kmsKeyId: ssmKey.keyArn,
       });
+      //console.log(logGroup);
       const globalOptionsConfig = config['global-options'];
       const useS3 = globalOptionsConfig['central-log-services']['ssm-to-s3'];
       const useCWL = globalOptionsConfig['central-log-services']['ssm-to-cwl'];

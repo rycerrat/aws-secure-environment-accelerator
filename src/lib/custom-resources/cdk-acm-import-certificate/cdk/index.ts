@@ -53,20 +53,6 @@ export class AcmImportCertificate extends Construct implements cdk.ITaggable {
     props.certificateBucket.grantRead(this.role);
     props.privateKeyBucket.grantRead(this.role);
     props.certificateChainBucket?.grantRead(this.role);
-  }
-
-  get certificateArn(): string {
-    // Return a lazy value as the resource only gets created in the onPrepare phase
-    return cdk.Lazy.string({
-      produce: () => this.resource!.getAttString('CertificateArn'),
-    });
-  }
-
-  get role(): iam.IRole {
-    return this.lambdaFunction.role!;
-  }
-
-  protected onPrepare() {
     const handlerProperties: HandlerProperties = {
       certificateBucketName: this.props.certificateBucket.bucketName,
       certificateBucketPath: this.props.certificateBucketPath,
@@ -86,6 +72,38 @@ export class AcmImportCertificate extends Construct implements cdk.ITaggable {
       properties: handlerProperties,
     });
   }
+
+  get certificateArn(): string {
+    // Return a lazy value as the resource only gets created in the onPrepare phase
+    return cdk.Lazy.string({
+      produce: () => this.resource!.getAttString('CertificateArn'),
+    });
+  }
+
+  get role(): iam.IRole {
+    return this.lambdaFunction.role!;
+  }
+
+  // protected onPrepare() {
+  //   const handlerProperties: HandlerProperties = {
+  //     certificateBucketName: this.props.certificateBucket.bucketName,
+  //     certificateBucketPath: this.props.certificateBucketPath,
+  //     privateKeyBucketName: this.props.privateKeyBucket.bucketName,
+  //     privateKeyBucketPath: this.props.privateKeyBucketPath,
+  //     certificateChainBucketName: this.props.certificateChainBucket?.bucketName,
+  //     certificateChainBucketPath: this.props.certificateChainBucketPath,
+  //     ignoreLimitExceededException: this.props.ignoreLimitExceededException,
+  //     tags: this.tags.renderTags(),
+  //   };
+
+  //   // Create the resource in the onPrepare phase to make the renderTags() work properly
+  //   this.resource = new cdk.CustomResource(this, 'Resource', {
+  //     resourceType,
+  //     serviceToken: this.lambdaFunction.functionArn,
+  //     removalPolicy: this.props.removalPolicy ?? cdk.RemovalPolicy.RETAIN,
+  //     properties: handlerProperties,
+  //   });
+  // }
 
   private get lambdaFunction(): lambda.Function {
     const constructName = `${resourceType}Lambda`;

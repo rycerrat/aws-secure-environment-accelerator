@@ -80,31 +80,55 @@ export class LogGroup extends Construct implements cdk.ITaggable {
   constructor(scope: Construct, id: string, private readonly props: LogGroupProps) {
     super(scope, id);
     this.roleArn = props.roleArn;
-  }
-
-  protected onPrepare() {
+    console.log('-------');
+    console.log(this.roleArn);
+    console.log(props);
     const handlerProperties: HandlerProperties = {
       logGroupName: this.props.logGroupName,
       retention: this.props?.retention,
       tags: this.tags.renderTags(),
       kmsKeyId: this.props.kmsKeyId,
     };
-
+    console.log(handlerProperties);
     this.resource = new cdk.CustomResource(this, 'Resource', {
       resourceType,
       serviceToken: this.lambdaFunction.functionArn,
       properties: handlerProperties,
       removalPolicy: this.props.removalPolicy ?? cdk.RemovalPolicy.RETAIN,
     });
+    console.log(this.resource);
   }
 
+  // protected onPrepare() {
+  //   const handlerProperties: HandlerProperties = {
+  //     logGroupName: this.props.logGroupName,
+  //     retention: this.props?.retention,
+  //     tags: this.tags.renderTags(),
+  //     kmsKeyId: this.props.kmsKeyId,
+  //   };
+
+  //   console.log("^^^^ inside unprepare ^^^^");
+
+  //   this.resource = new cdk.CustomResource(this, 'Resource', {
+  //     resourceType,
+  //     serviceToken: this.lambdaFunction.functionArn,
+  //     properties: handlerProperties,
+  //     removalPolicy: this.props.removalPolicy ?? cdk.RemovalPolicy.RETAIN,
+  //   });
+  // }
+
   get logGroupName() {
+    console.log('^^^^ Getting Log Group ^^^^');
+    console.log(this.resource);
+    const a = this.resource!.getAttString('LogGroupName');
+    console.log(a);
     return cdk.Lazy.string({
       produce: () => this.resource!.getAttString('LogGroupName'),
     });
   }
 
   get logGroupArn() {
+    console.log(`arn:aws:logs:${cdk.Aws.REGION}:${cdk.Aws.ACCOUNT_ID}:log-group:${this.logGroupName}:*`);
     return `arn:aws:logs:${cdk.Aws.REGION}:${cdk.Aws.ACCOUNT_ID}:log-group:${this.logGroupName}:*`;
   }
 

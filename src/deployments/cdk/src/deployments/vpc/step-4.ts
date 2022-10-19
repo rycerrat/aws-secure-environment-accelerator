@@ -55,10 +55,13 @@ function createVpcDnsQueryLogging(props: VpcStep4Props) {
     return;
   }
 
+  console.log('88888888888');
+  //console.log(createLogGroupName(`rql/${vpcConfig.name}-${vpcId}`, 0));
   const logGroup = new LogGroup(accountStack, `LogGroup${accountStack}${vpcConfig.name}`, {
     logGroupName: createLogGroupName(`rql/${vpcConfig.name}-${vpcId}`, 0),
     roleArn: logGroupLambdaRoleOutput.roleArn,
   });
+  console.log(logGroup);
 
   const queryLoggingConfig = new CfnResolverQueryLoggingConfig(accountStack, `Rql${vpcConfig.name}`, {
     destinationArn: logGroup.logGroupArn,
